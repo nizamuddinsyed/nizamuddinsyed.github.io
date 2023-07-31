@@ -1,13 +1,23 @@
 /*=============== SHOW SIDEBAR ===============*/
-
+const navMenu = document.getElementById('sidebar'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 /*===== SIDEBAR SHOW =====*/
 /* Validate If Constant Exists */
-
+if(navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.add('show-sidebar')
+    })
+}
 
 /*===== SIDEBAR HIDDEN =====*/
 /* Validate If Constant Exists */
-
+if(navClose) {
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove('show-sidebar')
+    })
+}
 
 /*=============== SKILLS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),
@@ -143,7 +153,7 @@ inputs.forEach((input) => {
 }
 )
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-//get al;l sections that have an id defined
+//get all sections that have an id defined
 const section = document.querySelectorAll("section[id]");
 
 // add an event listner listning for scroll

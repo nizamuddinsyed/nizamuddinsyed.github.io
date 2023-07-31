@@ -139,6 +139,7 @@ button, input {
     height: 100vh;
     background-color: var(--body-color);
     border-right: 1px solid var(--box-color);
+    transition: .5s;
 }
 
 .nav_logo {
@@ -200,6 +201,32 @@ button, input {
 
 .social_share {
     font-size: 1.5rem;
+}
+
+.nav_toggle {
+    height: 32px;
+    width: 36px;
+    cursor: pointer;
+    position: fixed;
+    right: 1.5rem;
+    top: 2rem;
+    font-size: 1.2rem;
+    border-radius: .25rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+    display: none;
+
 }
 
 
@@ -978,7 +1005,8 @@ textarea.input {
     resize: none;
 }
 
-.input_container label {
+/* in the contact form, the labels are static , look into the below code*/
+.input_container label { 
     position: absolute;
     top: 50%;
     left: 1rem;
@@ -988,7 +1016,7 @@ textarea.input {
     font-size: 1rem;
     font-weight: var(--font-medium);
     pointer-events: none;
-    z-index: 1000;
+    z-index: 15;
     transition: .5s;
 }
 .input_container.textarea label {
@@ -1005,7 +1033,7 @@ textarea.input {
     font-size: var(--small-font-size);
     padding: 0 .4rem;
     pointer-events: none;
-    z-index: 500;
+    z-index: var(--z-fixed);
 }
 
 .input_container span::before,
@@ -1051,7 +1079,7 @@ textarea.input {
 }
 .footer_bg {
     background-color: var(--box-color);
-    padding: 3rem 0 .3rem;
+    padding: 3rem 0 3.5rem;
 }
 
 .footer_title {
@@ -1109,20 +1137,351 @@ textarea.input {
 
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
 
 /*========== BREAKPOINTS ==========*/
 /* For Large Devices */
-@media screen and (max-width: 1408px) {}
+@media screen and (max-width: 1408px) {
+    .container {
+        margin-left: var(--mb-2-5);
+        margin-right: var(--mb-2-5);
+    }
+}
 
-@media screen and (max-width: 1216px) {}
+@media screen and (max-width: 1216px) {
+    .about_container {
+        column-gap: 2.5rem;
+    }
 
-@media screen and (max-width: 1024px) {}
+    .about_description {
+        padding-right: 0;
+    }
+
+    .work_container {
+        grid-template-columns: repeat(2, 330px);
+        gap: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
+    .sidebar {
+        width: 100%;
+        z-index: 999;
+        transform: translateX(-100%);
+    }
+    .show-sidebar {
+        transform: translateX(0);
+    }
+
+    .nav_logo,
+    .btn_share {
+        display: none;
+    }
+    .nav_menu {
+        height: 100%;
+        width: 100%;
+        transform: rotate(0deg) translateX(0);
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav_link {
+        padding: 1rem 0;
+        line-height: 1.5rem;
+    }
+    .nav_link.active-link::after, .nav_link:hover::after {
+        bottom: 0;
+    }
+    .nav_close {
+        display: block;
+    }
+    .nav_toggle {
+        display: flex;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+    .about_container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+    .about_img {
+        width: 350px;
+    }
+
+    .about_data {
+        text-align: center;
+    }
+
+    .about_info {
+        justify-content: center;
+    }
+
+    .about_box {
+        padding: .75rem .5rem;
+    }
+    .about_description {
+        padding: 0 4rem;
+        text-align: center;
+    }
+
+    .qualification_container {
+        grid-template-columns: repeat(2,290px);
+    }
+
+    .skills_container {
+        grid-template-columns: 340px 300 px;
+    }
+
+    .skills_list {
+        row-gap: 1.7rem;
+    }
+
+    .work_card {
+        padding: 1rem;
+    }
+
+    .work_img {
+        margin-bottom: var(--mb-0-75);
+    }
+
+    .work_title {
+        margin-bottom: var(--mb-0-25);
+    }
+
+    .services_container {
+        grid-template-columns: repeat(3, 220px);
+    }
+
+    .testimonial_card {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .portfolio_item-details {
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .details_info li {
+        margin-bottom: var(--mb-0-5);
+    }
+    .details_title {
+        margin-bottom: var(--mb-0-75);
+    }
+}
 
 /* For Medium Devices */
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .about_img {
+        width: 250px;
+    }
+    .qualification_container {
+        grid-template-columns: 290px;
+        row-gap: 3rem;
+    }
+    .skills_container {
+        grid-template-columns: 300px;
+        row-gap: 3rem;
+    }
 
-@media screen and (max-width: 576px) {}
+    .work_container {
+        grid-template-columns: 330px;
+
+    }
+    .services_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .services_content {
+        padding: 3.5rem .5rem 1.25rem 1.5rem;
+    }
+    .services_icon {
+        font-size: 1.5rem;
+    }
+    .contact_container {
+        grid-template-columns: 360px;
+        row-gap: 3rem;
+    }
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+
+    }
+
+    .footer_socials {
+        justify-self: start;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    .footer_bg {
+        padding: 2rem 0 3rem;
+    }
+
+    .footer_copy {
+        margin-top: var(--mb-3);
+    }
+    .portfolio_popup-inner {
+        width: 420px;
+        padding: 2.8rem 1.5rem 2.5rem;
+    }
+
+    .portfolio_popup-content {
+        grid-template-columns: 1fr;
+        row-gap: 1.6rem;
+    }
+
+    .details_title {
+        font-size: var(--normal-font-size);
+    }
+    .portfolio_popup-close {
+        top: .5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .nav_toggle {
+        right: initial;
+        left: 1.5rem;
+    }
+    .home {
+        background-image: none;
+        height: initial;
+        align-items: initial;
+        padding: 7rem 0 2rem;
+    }
+    .home_container {
+        row-gap: 2rem;
+    }
+
+    .home_img {
+        display: block;
+        width: 2590px;
+        justify-self: center;
+    }
+    .home_social {
+        left: initial;
+        right: -1rem;
+        flex-direction: column;
+        row-gap: 3.5rem;
+    }
+
+    .home_social-follow {
+        font-size: var(--small-font-size);
+        transform: rotate(90deg);
+    }
+
+    .home_social-links {
+        flex-direction: column;
+        row-gap: .25rem;
+    }
+    .home_social-link {
+        font-size: var(--normal-font-size);
+    }
+
+    .my_info {
+        display: none;
+    }
+
+    .about_info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about_description {
+        padding: 0;
+    }
+
+    .services_modal-content {
+        padding: 4.5rem 1.5rem 2.5rem;
+    }
+    .services_modal-description {
+        padding: 0;
+    }
+    .contact_container,
+    .work_container {
+        grid-template-columns: 300px;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer_links {
+        justify-self: flex-start;
+    }
+
+
+}
 
 /* For Small Devices */
-@media screen and (max-width: 350px) {}
+@media screen and (max-width: 350px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .home_img {
+        width: 200px;
+    }
+
+    .home_title {
+        font-size: var(--h1-font-size);
+    }
+
+    .home_subtitle {
+        font-size: var(--normal-font-size);
+    }
+
+    .about_info {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: .5rem;
+    }
+
+    .contact_container,
+    .work_container,
+    .skills_container,
+    .qualification_container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills_title {
+        font-size: var(--normal-font-size);
+    }
+    .work_item {
+        font-size: var(--small-font-size);
+    }
+
+    .work_filters {
+        column-gap: .25rem;
+    }
+    .services_container {
+        grid-template-columns: max-content;
+    }
+    .services_content {
+        padding-right: 3.5rem;
+    }
+}
