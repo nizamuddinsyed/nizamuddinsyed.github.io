@@ -257,8 +257,46 @@ button, input {
 /*===== Home Section =====*/
 
 
+/* .home_data {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  .home_data h1 {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    overflow: hidden;
+  }
+  .home_data h1 span.typed-text {
+    font-weight: normal;
+    /* color: #dd7732; */
+    color: var(--skin-color);
+  }
+  .home_data h1 span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .home_data h1 span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
+
 .home {
-    background: url('../img/home-nizam-bg1.jpeg');
+    /* background: url('../img/home-nizam-bg1.jpeg'); */
+    background: url('../img/home-nizam-bg.jpeg');
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -354,6 +392,12 @@ button, input {
     color: var(--skin-color);
     margin-right: var(--mb-0-75);
 }
+.info_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
 /*===== Buttons =====*/
 .button {
     display: inline-flex;
@@ -388,6 +432,18 @@ button, input {
 }
 
 .button_icon {
+    font-size: 1.25rem;
+}
+
+/* ADDED CV BUTTON CSS */
+/* add space between More about me and Download CV buttons */
+.space {
+  width: 10px;
+  height: auto;
+  display: inline-block;
+}
+
+.cv_button_icon {
     font-size: 1.25rem;
 }
 
