@@ -162,6 +162,7 @@ button, input {
 }
 
 
+
 .nav_menu {
     position: fixed;
     transform: rotate(-90deg) translateX(-100%);
@@ -410,6 +411,7 @@ button, input {
     font-weight: var(--font-medium);
     position: relative;
     z-index: 1;
+    border: 1px dashed black;
 }
 
 .button::after{
@@ -438,7 +440,7 @@ button, input {
 /* ADDED CV BUTTON CSS */
 /* add space between More about me and Download CV buttons */
 .space {
-  width: 10px;
+  width: 20px;
   height: auto;
   display: inline-block;
 }
@@ -473,7 +475,8 @@ button, input {
 .about_info {
     display: grid;
     grid-template-columns: repeat(3, 140px);
-    column-gap: .5rem;
+    /* adjusted column gap */
+    column-gap: 2.5rem; 
     margin-bottom: var(--mb-3);
 }
 
@@ -497,6 +500,21 @@ button, input {
 }
 
 /*===== Qualification Section =====*/
+a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: white;
+  }
+  
+  a:hover {
+    color: var(--skin-color); /* Set the desired color for when the link is hovered */
+  }
+
+  
+
 .qualification_container {
     grid-template-columns: repeat(2, 340px);
     column-gap: 3rem;
@@ -507,6 +525,11 @@ button, input {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-2-5);
+}
+
+/* add spoace bwteen icon and Education */
+.icon {
+    margin-right: 10px;
 }
 
 .timeline_item {
@@ -753,7 +776,7 @@ button, input {
     cursor: pointer;
 }
 
-.portfolio_popup-im,g {
+.portfolio_popup-img {
     border-radius: .5rem;
 }
 
@@ -853,6 +876,7 @@ button, input {
 }
 
 
+
 .services_modal-content {
     width: 500px;
     position: relative;
@@ -891,7 +915,7 @@ button, input {
     row-gap: var(--mb-0-75);
 }
 
-.services_modal-services {
+.services_modal-services li {
     display: flex;
     align-items: center;
     column-gap: .5rem;
@@ -915,7 +939,7 @@ button, input {
 
 /*===== Testimonial Section =====*/
 @media screen and (min-width: 992px) {
-    .testimonials_container {
+    .testimonials_container container swiper{
         width: 750px;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -927,6 +951,7 @@ button, input {
     padding: 1.8rem 2rem;
     border-radius: .5rem;
     margin-bottom: 3rem;
+
 }
 
 .testimonial_quote {
@@ -942,7 +967,7 @@ button, input {
 }
 .testimonial_date {
     font-size: var(--normal-font-size);
-    margin-bottom:var(--mb-2) ;
+    margin-bottom:var(--mb-2);
 }
 .testimonial_profile {
     display: flex;
@@ -960,6 +985,8 @@ button, input {
     flex-direction: column;
     row-gap: .4rem;
 }
+
+
 .testimonial_profile-name {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
@@ -971,11 +998,15 @@ button, input {
 
 /* Swiper Class */
 .swiper-pagination-bullet {
-    background-color: var(--box-color);
+    background-color: var(--skin-color);
 }
 .swiper-pagination-bullet-active {
-    background-color: var(--skin-color);
+    color: var(--skin-color);
 
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--skin-color);
 }
 
 /*===== Contact Section =====*/
@@ -1033,6 +1064,7 @@ button, input {
 .contact_button:hover .contact_button-icon{
     transform: translateX(.25rem);
 }
+
 .input_container {
     position: relative;
     margin-top: .1rem;
@@ -1073,7 +1105,8 @@ textarea.input {
     font-weight: var(--font-medium);
     pointer-events: none;
     z-index: 15;
-    transition: .5s;
+    /* transition: .5s; */
+    transition: 0.2s ease-out;
 }
 .input_container.textarea label {
     top: 1rem;
@@ -1090,6 +1123,7 @@ textarea.input {
     padding: 0 .4rem;
     pointer-events: none;
     z-index: var(--z-fixed);
+    transition: 0.2s ease-out;
 }
 
 .input_container span::before,
@@ -1127,8 +1161,22 @@ textarea.input {
 }
 /*=============== FOOTER ===============*/
 .footer {
-    padding-top: 2rem;
+    padding-top: 10rem;
 }
+
+/* .footer {
+    padding-top: 10rem;
+    position: relative;
+    width: 100%;
+    background: var(--box-color);
+    min-height: 10px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  } */
+
 .footer_container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.6rem;
@@ -1137,6 +1185,68 @@ textarea.input {
     background-color: var(--box-color);
     padding: 3rem 0 3.5rem;
 }
+
+/* refer below links for wave footer */
+/* https://codepen.io/alvarotrigo/pen/GRxxWdQ */
+/* https://www.softr.io/tools/svg-wave-generator */
+
+/* .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background: url('../img/wave.png');
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 10000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  } */
+  
+  /* @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  } */
+  
 
 .footer_title {
     font-size: var(--h1-font-size);
@@ -1168,7 +1278,34 @@ textarea.input {
 .footer_copy {
     font-size: var(--small-font-size);
     text-align: center;
+    margin-top: 1rem;
+}
+/* Footer Heart */
+.footer-heart{
+    font-size: var(--small-font-size);
     margin-top: 4.5rem;
+    text-align:center;
+}
+
+.footer-heart a{
+    border-bottom: 1px solid var(--skin-color);
+    /* color: #453886; */
+    padding-bottom: .25em;
+    text-decoration: none;
+}
+
+.footer-heart a:hover{
+    color:var(--skin-color);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;}
+
+.emoji{
+    vertical-align: middle;
 }
 
 .footer_title,
@@ -1181,12 +1318,12 @@ textarea.input {
 ::-webkit-scrollbar {
     width: .60rem;
     background-color: var(--scroll-bar-color);
-    border-radius: .5rem;
+    border-radius: 2rem;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--scroll-thumb-color);
-    border-radius: .5rem;
+    border-radius: 2rem;
 }
 
 /* Show Scroll Up*/

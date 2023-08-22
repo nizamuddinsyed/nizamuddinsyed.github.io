@@ -1,7 +1,7 @@
 /*=============== SHOW SIDEBAR ===============*/
 const navMenu = document.getElementById('sidebar'),
     navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+    navClose = document.getElementById('nav-close');
 
 /*===== SIDEBAR SHOW =====*/
 /* Validate If Constant Exists */
@@ -9,7 +9,7 @@ if(navToggle) {
     navToggle.addEventListener("click", () => {
         navMenu.classList.add('show-sidebar')
     })
-}
+};
 
 /*===== SIDEBAR HIDDEN =====*/
 /* Validate If Constant Exists */
@@ -24,10 +24,10 @@ if(navClose) {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Data Scientist", "ML Engineer", "AI Engineer", "Data Sciene Advisor"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
+const textArray = ["Data Scientist", "ML Engineer", "AI Advisor", "AI Consultant", "Data Strategist", "AI Product Manager"];
+const typingDelay = 50;
+const erasingDelay = 50;
+const newTextDelay = 1000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 
@@ -99,6 +99,7 @@ let mixerPortfolio = mixitup('.work_container', {
         duration: 300
     }
 });
+
 /*===== Link Active Work =====*/
 
 const linkWork = document.querySelectorAll('.work_item')
@@ -134,15 +135,15 @@ function portfolioItemDetails(portfolioItem) {
 /*=============== SERVICES MODAL ===============*/
 
 const modalViews = document.querySelectorAll('.services_modal'),
-modelBtns = document.querySelectorAll('.services_button'),
-modelCloses = document.querySelectorAll('.services_modal-close');
+    modalBtns = document.querySelectorAll('.services_button'),
+    modalCloses = document.querySelectorAll('.services_modal-close');
 
 let modal = function(modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
 
-modalBtns.forEach((modelBtns, i) => {
-    modelBtns.addEventListener('click', () => {
+modalBtns.forEach((modalBtns, i) => {
+    modalBtns.addEventListener('click', () => {
         modal(i)
     })
 })
@@ -157,14 +158,22 @@ modalCloses.forEach((modalClose) => {
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
-let swiper = new Swiper(".testimonials_container", {
-    spaceBetween: 24,
-    loop: true,
+let swiper = new Swiper('.testimonials_container', {
+    // spaceBetween: 24,
+    effect: "coverflow",
     grabCursor: true,
-
+    centeredSlides: true,
+    slidesPerView: "auto",
+    overflowEffect: {
+        rotate: 50,
+        stretch: 10,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+      el: '.swiper-pagination',
+       clickable: true,
     },
     breakpoints: {
         576: {
@@ -174,7 +183,11 @@ let swiper = new Swiper(".testimonials_container", {
           slidesPerView: 4,
           spaceBetween: 48,
         },
-      }, 
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
   });
 /*=============== INPUT ANIMATION ===============*/
 const inputs = document.querySelectorAll(".input");
@@ -199,7 +212,7 @@ inputs.forEach((input) => {
 )
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 //get all sections that have an id defined
-const section = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("section[id]");
 
 // add an event listner listning for scroll
 window.addEventListener("scroll", navHighlighter);
