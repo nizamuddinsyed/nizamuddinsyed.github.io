@@ -813,14 +813,140 @@ a {
     color: var(--skin-color);
 }
 
-/*===== Services Section =====*/
-.services_container {
-    grid-template-columns: repeat(3, 250px);
-    justify-content: center;
-    column-gap: 1.8rem;
+
+/* New Services */
+
+/* Book now button animation */
+.glow-on-hover {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: var(--skin-color);
+    background: var(--box-color);
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    /* background: linear-gradient(45deg, #e1094a, #e1094a, purple, #e1094a); */
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    animation: glowing 10s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #000;
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+li::before {
+    content: '\2003'; /* Three en space characters */
+}
+.card_icon {
+    margin-right: 20px; /* Adjust this value to your preference */
 }
 
-.services_content {
+li {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+  
+  ul {
+    list-style: none;
+    font-size: var(--normal-font-size);
+    margin-top: .1rem;
+    margin-bottom: 1.9rem;
+
+  }
+  
+  .cards {
+    position: relative;
+    
+  }
+  
+  .cards__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    padding-top: 5em;
+    padding-bottom: 3em;
+  }
+  
+  .card {
+    --flow-space: 0.5em;
+    /* --hsl: var(--hue), var(--saturation), var(--lightness); */
+    flex: 1 1 14rem;
+    padding: 1.5em 2em;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+    gap: 1.25em;
+    background-color: var(--box-color);
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+  }
+  
+  .services_container {
+    /* justify-self: auto; */
+    justify-content: auto;
+    justify-items: auto;
+    column-gap: 1.5rem;
+}
+  
+  .card:hover {
+      /* box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2); */
+      box-shadow: 0 0 3px 3px var(--skin-color);
+      transform: scale(1.05);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+/*===== Services Section =====*/
+
+
+/* .services_container {
+    grid-template-rows: repeat(2, 250px);
+    justify-content: center;
+    column-gap: 2rem;
+} */
+
+/* .services_content {
     position: relative;
     background-color: var(--box-color);
     padding: 6rem 0 2rem 2.5rem;
@@ -926,14 +1052,14 @@ a {
 }
 .services_modal-info {
     font-size: var(--small-font-size);
-}
+} */
 
 /* Active Modal*/
 
-.active-modal {
+/* .active-modal {
     opacity: 1;
     visibility: visible;
-}
+} */
 
 
 
@@ -1070,6 +1196,27 @@ a {
     margin-top: .1rem;
     margin-bottom: 1.9rem;
 }
+/* contact form */
+.col {
+    position: relative;
+    margin-top: .1rem;
+    margin-bottom: 1.9rem;
+}
+
+.form-control {
+    width: 100%;
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+    padding: .6rem 1.2rem;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    letter-spacing: .5px;
+    outline: none;
+    border-radius: .50rem;
+    transition: .3s;
+
+}
 
 .input {
     width: 100%;
@@ -1160,22 +1307,15 @@ textarea.input {
     opacity: 1;
 }
 /*=============== FOOTER ===============*/
-.footer {
-    padding-top: 10rem;
-}
 
-/* .footer {
-    padding-top: 10rem;
+.footer {
+    padding-top: 5rem;
     position: relative;
     width: 100%;
-    background: var(--box-color);
-    min-height: 10px;
-    padding: 20px 50px;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-  } */
+  }
 
 .footer_container {
     grid-template-columns: repeat(3, 1fr);
@@ -1185,68 +1325,6 @@ textarea.input {
     background-color: var(--box-color);
     padding: 3rem 0 3.5rem;
 }
-
-/* refer below links for wave footer */
-/* https://codepen.io/alvarotrigo/pen/GRxxWdQ */
-/* https://www.softr.io/tools/svg-wave-generator */
-
-/* .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("https://i.ibb.co/wQZVxxk/wave.png");
-    background: url('../img/wave.png');
-    background-size: 1000px 100px;
-  }
-  
-  .wave#wave1 {
-    z-index: 10000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWaves 4s linear infinite;
-  }
-  
-  .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animate 4s linear infinite !important;
-  }
-  
-  .wave#wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateWaves 3s linear infinite;
-  }
-  
-  .wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animate 3s linear infinite;
-  } */
-  
-  /* @keyframes animateWaves {
-    0% {
-      background-position-x: 1000px;
-    }
-    100% {
-      background-positon-x: 0px;
-    }
-  }
-  
-  @keyframes animate {
-    0% {
-      background-position-x: -1000px;
-    }
-    100% {
-      background-positon-x: 0px;
-    }
-  } */
-  
 
 .footer_title {
     font-size: var(--h1-font-size);

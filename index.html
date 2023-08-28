@@ -136,7 +136,7 @@
                         <a href="mailto:iamsyed.05@gmail.com" class="info_link">
                             <i class="uil uil-envelope-edit info_icon"></i>
                             <div>
-                                <h3 class="info_title">iamsyed[dot]05[at]gmail[dot]com</h3>
+                                <h3 class="info_title">iamsyed [dot] 05 [at] gmail [dot] com</h3>
                                 <!-- <span class="info_subtitle">iamsyed[dot]05[at]gmail[dot]com</span> -->
                             </div>
                         </a>
@@ -581,7 +581,7 @@
         </div>
         
         <!--===== Services =====-->
-        <section class="services section" id="services">
+        <!-- <section class="services section" id="services">
             <h2 data-heading="Services" class="section_title" >What I offer</h2>
 
             <div class="services_container container grid">
@@ -594,8 +594,6 @@
                     <span class="services_button">
                         View More <i class="uil uil-arrow-right services_button-icon"></i>
                     </span>
-
-                    <!-- inside 'view more' section -->
                     <div class="services_modal">
                         <div class="services_modal-content">
                             <i class="uil uil-times services_modal-close"></i>
@@ -718,8 +716,48 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         
+
+        <!-- NEW SERVICES -->
+        <section class="services section" id="services">
+        <h2 data-heading="Services" class="section_title" >What I offer</h2>
+        <!-- <div class="main__cards cards"> -->
+            <div class="services_container container grid">
+            <div class="cards__inner">
+                <div class="cards__card card">
+                    <h2 class="card__heading">FREE Consultation</h2>
+                    <h2 class="card__price">€ FREE</h2>
+                    <ul class="card__bullets flow" role="list">
+                        <li><span class="card_icon">🚀</span>Product Visioning</li>
+                        <li><span class="card_icon">🛠️</span>Tech Stack Guidance</li>
+                        <li><span class="card_icon">💰</span>Cost Forecasting</li>
+                        <li><span class="card_icon">🔄</span>Agile 101</li>
+
+                    </ul>
+                    <!-- <a class="card__cta cta" href="#basic">BOOK NOW</a> -->
+                    <form action="https://cal.com/nizamsyed/free-consultation" method="get" target="_blank">
+                        <button class="glow-on-hover" type="submit">BOOK NOW</button>
+                    </form>
+                </div>
+                <div class="cards__card card">
+                    <h2 class="card__heading">Full Stack AI App development</h2>
+                    <h2 class="card__price">From € 999</h2>
+                    <ul class="card__bullets flow" role="list">
+                        <li><span class="card_icon">🚀</span>Supercharge Your Project with Tailored AI Solutions</li>
+                        <li><span class="card_icon">🌐</span>Elevate User Experience Across All Platforms</li>
+                        <li><span class="card_icon">🔒</span>Fortify Your System with Top-Notch Security</li>
+                        <li><span class="card_icon">📈</span>Unlock Explosive Growth with Data Insights</li>
+
+                    </ul>
+                    <form action="https://cal.com/nizamsyed/ai-development" method="get" target="_blank">
+                        <button class="glow-on-hover" type="submit" >BOOK NOW</button>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay cards__inner"></div>
+        </div>
+        </section>
         <!--===== Testimonials / Endorsement =====-->
         <section class="testimonials section">
             <h2 data-heading="Testimonials from my colleagues" class="section_title" >Endorsement</h2>
@@ -838,6 +876,7 @@
             <h2 data-heading="Get in touch" class="section_title" >Contact Me</h2>
 
             <div class="contact_container container grid">
+                <!-- left side of contact me icons -->
                 <div class="contact_content">
                     <div class="contact_info">
 
@@ -879,45 +918,65 @@
 
                     </div>
                 </div>
+
+                <!-- Right side of contact me form -->
+                <!-- form with email functionality -->
                 <div class="contact_content">
-                    <form action="" class="contact_form">
-                        <div class="input_container">
-                            <input type="text" class="input">
-                            <label for="">Username</label>
-                            <span>Username</span>
+                    <form id="contact-form" target="_blank" method="POST">
+                        <input type="hidden" name="_template" value="table">
+
+                        <!-- auto response -->
+                        <input type="hidden" name="_autoresponse" value="
+                        Halo,
+
+                        Thank you for reaching out to us. We value your inquiry and will ensure that it receives the attention it deserves. Please be assured that we will get back to you as soon as possible.
+
+                        Thank you for your patience and understanding.
+
+                        Warm regards,
+                        
+                        Nizam Syed
+                        ">
+                        <!-- <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'm rolling up my sleeves to reply asap."> -->
+                        <div class="form-group">
+                            <div class="form-col">
+                                <!-- first column - Name REQUIRED-->
+                              <div class="col">
+                                        <!-- <input type="text" name="name" class="form-control" placeholder="Name"> -->
+                                        <input id="name" type="text" name="name" class="form-control" placeholder="* Full Name" required>
+                                </div>
+                                <!-- second column - email REQUIRED-->
+                              <div class="col">
+                                    <!-- <input type="email" class="input" placeholder="Email"> -->
+                                    <input type="email" name="email" class="form-control" placeholder="* Email Address" required>
+                                </div>
+
+                                <!-- 3rd Column phone- NOT REQUIRED -->
+                                <div class="col">
+                                    <!-- <input type="email" class="input" placeholder="Email"> -->
+                                    <input type="phone" name="phone" class="form-control" placeholder="Phone no" >
+                                </div>
+                            </div>
                         </div>
-                        <div class="input_container">
-                            <input type="email" class="input">
-                            <label for="">Email</label>
-                            <span>Email</span>
-                        </div>
-                        <div class="input_container">
-                            <input type="tel" class="input">
-                            <label for="">Phone</label>
-                            <span>Phone</span>
-                        </div>
-                        <div class="input_container textarea">
-                            <textarea name="" id="" class="input" ></textarea>
-                            <label for="">Message</label>
-                            <span>Message</span>
-                        </div>
+
+                        <!-- text area -->
+                        <div class="form-group textarea">
+                                <!-- <textarea name="message" id="" class="input" placeholder="Your Message..."></textarea> -->
+                                <textarea placeholder="* Type Your Message..." class="form-control" name="message" rows="10"  required></textarea>
+                        </div><br>
+
+                        <!-- Submit button -->
                         <button type="submit" class="button"><i class="uil uil-navigator button_icon"></i>
-                        Send Messgae
+                            Send Message
                         </button>
                     </form>
                 </div>
+
             </div>
         </section>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <!-- added footor waves -->
-            <!-- <div class="waves">
-                <div class="wave" id="wave1"></div>
-                <div class="wave" id="wave2"></div>
-                <div class="wave" id="wave3"></div>
-                <div class="wave" id="wave4"></div>
-              </div> -->
             <div class="footer_bg">
                <div class="footer_container container grid">
                     <div>
