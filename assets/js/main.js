@@ -24,7 +24,7 @@ if(navClose) {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Data Scientist", "ML Engineer", "AI Advisor", "AI Consultant", "Data Strategist", "AI Product Manager"];
+const textArray = ["Data Scientist", "ML Engineer", "AI Advisor", "AI Consultant", "Data Strategist"];
 const typingDelay = 50;
 const erasingDelay = 50;
 const newTextDelay = 1000; // Delay between current and next text
@@ -89,7 +89,7 @@ const tabs = document.querySelectorAll('[data-target]'),
 
 
 
-/*=============== MIXITUP FILTER PORTFOLIO ===============*/
+/*=============== MIXITUP FILTER PORTFOLIO work ===============*/
 
 let mixerPortfolio = mixitup('.work_container', {
     selectors: {
@@ -119,19 +119,23 @@ document.addEventListener("click", (e) => {
         portfolioItemDetails(e.target.parentElement);
     }
 
-})
+});
 
+// Function to toggle popup open/close
 function togglePortfolioPopup() {
     document.querySelector(".portfolio_popup").classList.toggle("open");
+    
 }
 
-document.querySelector(".portfolio_popup-close").addEventListener("click", togglePortfolioPopup)
+document.querySelector(".portfolio_popup-close").addEventListener("click", togglePortfolioPopup);
 
 function portfolioItemDetails(portfolioItem) {
-    document.querySelector(".pp_thumbnail img").scr = portfolioItem.querySelector(".work_img").scr;
+    document.querySelector(".pp_thumbnail img").src = portfolioItem.querySelector(".work_img").src;
     document.querySelector(".portfolio_popup-subtitle span").innerHTML = portfolioItem.querySelector(".work_title").innerHTML;   
-    /*document.querySelector(".portfolio_popup-body span").innerHTML = portfolioItem.querySelector(".portfolio_item-details").innerHTML; */
+    document.querySelector(".portfolio_popup-body").innerHTML = portfolioItem.querySelector(".portfolio_item-details").innerHTML;
 }
+
+
 /*=============== SERVICES MODAL ===============*/
 
 const modalViews = document.querySelectorAll('.services_modal'),
@@ -159,7 +163,7 @@ modalCloses.forEach((modalClose) => {
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 let swiper = new Swiper('.testimonials_container', {
-    // spaceBetween: 24,
+    // spaceBetween: 24,    
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -236,5 +240,12 @@ function navHighlighter()
     })
 }
 
+// Form submit EMAIL RESPONSE
+var encodedEmail = 'aWFtc3llZC4wNUBnbWFpbC5jb20='
+var userEmail = atob(encodedEmail);
+var form = document.getElementById("contact-form");
+form.action = "https://formsubmit.co/" + userEmail;
+
 /*=============== SHOW SCROLL UP ===============*/
+
 

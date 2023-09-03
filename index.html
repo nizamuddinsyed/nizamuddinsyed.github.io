@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    
     <!--========== SIDEBAR ==========-->
     <div class="nav_toggle" id="nav-toggle">
         <i class="uil uil-bars"></i>
@@ -52,13 +53,16 @@
                             <a href="#services" class="nav_link">Services</a>
                         </li>
                         <li class="nav_item">
+                            <a href="#testimonials" class="nav_link">Testimonials</a>
+                        </li>
+                        <li class="nav_item">
                             <a href="#contact" class="nav_link">Contact</a>
                         </li>
                     </ul> 
                 </div>
             </div>
             <div class="btn_share">
-                <i class="uil uil-share-alt social-share"></i>
+                <i class="uil uil-shield-check social-share"></i>
             </div>
 
             <div class="nav_close" id="nav-close">
@@ -80,9 +84,9 @@
                         <a href="https://github.com/nizamuddinsyed" target="_blank" class="home_social-links">
                             <i class="uil uil-github"></i>
                         </a>
-                        <a href="https://www.kaggle.com/syednizamuddin" target="_blank" class="home_social-links">
+                        <!-- <a href="https://www.kaggle.com/syednizamuddin" target="_blank" class="home_social-links">
                             <i class="uil uil-brackets-curly"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
@@ -91,24 +95,22 @@
                 
 
                  <div class="home_data">
-                    <h1 class="home_title"> > I'm Nizam,
+                    <h1 class="home_title"> &gt; I'm Nizam,
                         <span class="typed-text"></span>
                         <span class="cursor">&nbsp</span>
                     </h1>
-
-                    <p class="home_description"><q><i>Data is my art, models are my medium, insights are my masterpieces.</i></q> - Hire Me!</p>
-                    <a href="#about" class="button">
-                        <i class="uil uil-user button_icon"></i>
-                        More About Me
-                    </a>
-                    <!-- Space Between two buttons -->
-                    <div class="space"></div>
-                    <!-- ADDED CV BUTTON -->
-                    <a href="https://drive.google.com/uc?export=download&id=1biOD_M6rJPDfhDgHaww5ckgr54eeslm6" class="button" download>
-                        <i class="uil uil-file-download cv_button_icon"></i>
-                        Download CV
-                    </a>
-                    
+                    <p class="home_description"><q><i>Data is my art, models are my medium, insights are my masterpieces.</i></p>
+                        <!-- buttons container |About Me| and |Download CV| -->
+                    <div class="button_container">
+                        <a href="#about" class="about_button">
+                            <i class="uil uil-user button_icon"></i>
+                            More About Me
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1biOD_M6rJPDfhDgHaww5ckgr54eeslm6" class="cv_button">
+                            <i class="uil uil-file-download button_icon"></i>
+                            Download CV
+                        </a>
+                    </div>
 
                 <div class="my_info">
                     <!-- Telegram -->
@@ -133,16 +135,13 @@
 
                     <!-- email -->
                     <div class="info_item">
-                        <a href="mailto:iamsyed.05@gmail.com" class="info_link">
+                        <a href="mailto:contact.nizamsyed@gmail.com" class="info_link">
                             <i class="uil uil-envelope-edit info_icon"></i>
                             <div>
-                                <h3 class="info_title">iamsyed [dot] 05 [at] gmail [dot] com</h3>
-                                <!-- <span class="info_subtitle">iamsyed[dot]05[at]gmail[dot]com</span> -->
+                                <h3 class="info_title">contact [dot] nizamsyed [at] gmail [dot] com</h3>
                             </div>
                         </a>
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -175,19 +174,13 @@
                         <div class="about_box">
                             <i class="uil uil-headphones about_icon"></i>
                             <h3 class="about_title">AI</h3>
-                            <span class="abouit_subtitle">community</span>
+                            <span class="abouit_subtitle">Support</span>
                         </div>
                     </div>
-                    <a href="#contact" class="button">
+                    
+                    <a href="#contact" class="about_contact_button">
                         <i class="uil uil-navigator button_icon"></i>
                         Contact Me
-                    </a>
-                    <!-- Space Between two buttons -->
-                    <div class="space"></div>
-                    <!-- ADDED CV BUTTON -->
-                    <a href="https://drive.google.com/uc?export=download&id=1biOD_M6rJPDfhDgHaww5ckgr54eeslm6" class="button" download>
-                        <i class="uil uil-file-download cv_button_icon"></i>
-                        Download CV
                     </a>
                 </div>
             </div>
@@ -413,7 +406,8 @@
             </div>
         
         </section>
-        <!--===== Work =====-->
+
+        <!--===== Recent Works =====-->
         <section class="work section" id="work">
             <h2 data-heading="My Portfolio" class="section_title" >Recent Works</h2>
             
@@ -422,81 +416,60 @@
                 <span class="work_item" data-filter=".cv">Computer Vision</span>
                 <span class="work_item" data-filter=".ml">Machine Learning</span>
                 <span class="work_item" data-filter=".dl">Deep Learning</span>
+                <span class="work_item" data-filter=".llm">Large Language Models</span>
             </div>
             <div class="work_container container grid">
-                <!-- project - 1 -->
-                <!-- cv -->
+                <!-- project - 1 CV Drone-->
                 <div class="work_card mix cv">
-                    <img src="assets/img/work-1.webp" alt="" class="work_img">
-                    <h3 class="work_title">Personal AI Trainer</h3>
+                    <img src="assets/img/drone_cv.webp" alt="" class="work_img">
+                    <h3 class="work_title">Drone - Gesture Controlll & Face Following</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title">The Service Provide..</h3>
-                        <p class="details_description">Welcome to the future of fitness training,
-                            where artificial intelligence meets physical exercise. Our AI Trainer 
-                            uses pose estimation to identify key points on your body. 
-                            It then calculates the angles between these points to recognize various gestures, 
-                            including the number of biceps curls you've done. </p>
+                        <h3 class="details_title"> Control drone using gesture recognition algorithms and enable facial tracking for autonomous following.</h3>
+                        <p class="details_description">In this project, a drone is controlled using gesture recognition algorithms and facial tracking capabilities. 
+                            Utilizing OpenCV and Python, the system is designed to interpret specific hand or body gestures as commands for the drone's movement, such as take-off, landing, or changing direction.
+                             Additionally, the drone is equipped with facial tracking features, allowing it to autonomously follow a targeted individual by recognizing and locking onto their face. 
+                             The combination of gesture-based control and facial tracking provides a seamless and interactive experience for controlling the drone. </p>
                             <ul class="details_info">
-                                <li>Created - <span>4 dec 2020</span></li>
+                                <li>Created - <span>Aug 2023</span></li>
                                 <li>Technologies - <span>OpenCV, Python</span></li>
                                 <li>Role - <span>Data Scientist</span></li>
-                                <li>View - <span><a href="#">www.domain.comkkkkkkk</a></span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/drone" target="_blank">github repo</a></span></li>
                             </ul>
                     </div>
                 </div>
-                <!-- Project - 2 -->
-                <!-- cv -->
+                <!-- Project - 2 CV photoshop-->
                 <div class="work_card mix cv">
-                    <img src="assets/img/work-2.webp" alt="" class="work_img">
-                    <h3 class="work_title">Drone Object Detection</h3>
+                    <img src="assets/img/photoshop_cv.png" alt="" class="work_img">
+                    <h3 class="work_title">Photoshop</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title">Mobile app landing design & app maintain</h3>
-                        <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Odit soluta vero facilis.</p>
+                        <h3 class="details_title"> A Simple Image Manipulation Tool with OpenCV</h3>
+                        <p class="details_description">Photoshop is a user-friendly, lightweight image Manipulation application built entirely using the html, css, js and OpenCV library. 
+                            The project aims to provide a simple yet effective demo for basic image manipulation tasks. 
+                            Designed to be intuitive and accessible.</p>
                             <ul class="details_info">
-                                <li>Created - <span>4 dec 2020</span></li>
-                                <li>Technologies - <span>OpenCV, Python</span></li>
-                                <li>Role - <span>AI Engineer</span></li>
-                                <li>View - <span><a href="#">www.domain.comasfdafds</a></span></li>
+                                <li>Created - <span>Dec 2022</span></li>
+                                <li>Technologies - <span>HTML, CSS, JavaScript, OpenCV</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="http://niz.iblogger.org/?i=1" target="_blank">CLICK HERE FOR DEMO</a></span></li>
                             </ul>
                     </div>
                 </div>
 
-                <!-- design -->
-                <div class="work_card mix design">
-                    <img src="assets/img/work-3.webp" alt="" class="work_img">
-                    <h3 class="work_title">Brand Design</h3>
+                 <!-- project - 1 ML-->
+                <div class="work_card mix ml">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">ML app - 404</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title">Logo Design creativity</h3>
-                        <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Odit soluta vero facilis.</p>
-                            <ul class="details_info">
-                                <li>Created - <span>4 dec 2020</span></li>
-                                <li>Technologies - <span>html css</span></li>
-                                <li>Role - <span>frontend</span></li>
-                                <li>View - <span><a href="#">www.domain.com</a></span></li>
-                            </ul>
-                    </div>
-                </div>
-
-                <!-- app -->
-                <div class="work_card mix app">
-                    <img src="assets/img/work-4.webp" alt="" class="work_img">
-                    <h3 class="work_title">App Design</h3>
-                    <span class="work_button">Demo
-                        <i class="uil uil-arrow-right work_button-icon"></i>
-                    </span>
-                    <div class="portfolio_item-details">
-                        <h3 class="details_title">Mobile app design...</h3>
+                        <h3 class="details_title">ML app - 404</h3>
                         <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Odit soluta vero facilis.</p>
                             <ul class="details_info">
@@ -508,15 +481,35 @@
                     </div>
                 </div>
 
-                <!-- web -->
-                <div class="work_card mix web">
-                    <img src="assets/img/work-5.webp" alt="" class="work_img">
-                    <h3 class="work_title">Data Science app</h3>
+                <!-- project - 2 ML-->
+                <div class="work_card mix ml">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">ML app - 404</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title">Data app design...</h3>
+                        <h3 class="details_title">ML app - 404</h3>
+                        <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Odit soluta vero facilis.</p>
+                            <ul class="details_info">
+                                <li>Created - <span>4 dec 2020</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#">www.domain.com</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                 <!-- project - 1 dl-->
+                <div class="work_card mix dl">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">DL app - 404</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title">DL app - 404.</h3>
                         <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Odit soluta vero facilis.</p>
                             <ul class="details_info">
@@ -528,15 +521,15 @@
                     </div>
                 </div>
 
-                <!-- design -->
-                <div class="work_card mix design">
-                    <img src="assets/img/work-6.webp" alt="" class="work_img">
-                    <h3 class="work_title">ML Prediction app</h3>
+                 <!-- project - 2 dl-->
+                <div class="work_card mix dl">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">DL app - 404</h3>
                     <span class="work_button">Demo
                         <i class="uil uil-arrow-right work_button-icon"></i>
                     </span>
                     <div class="portfolio_item-details">
-                        <h3 class="details_title">Titanic survival app</h3>
+                        <h3 class="details_title">DL app - 404</h3>
                         <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Odit soluta vero facilis.</p>
                             <ul class="details_info">
@@ -547,6 +540,29 @@
                             </ul>
                     </div>
                 </div>
+
+                <!-- Project -1 LLM -->
+                <div class="work_card mix llm">
+                    <img src="assets/img/llm.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">e-commerce Product Analysis</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title"> Using AI to Enhance Product Pages with LangChain and Python</h3>
+                        <p class="details_description">This project aims to use the realm of OpenAI and Langchain to generate sentiment of any ecommerce products.
+                            This will help the ecommerce companies to understand their potential customers in a better way and target the right product to right customer.
+
+                        </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Aug 2023</span></li>
+                                <li>Technologies - <span>OpenAI, LLM, Python</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/product_analysis_llm/blob/main/product_specification_llm.ipynb" target="_blank">CLICK HERE FOR DEMO</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -557,209 +573,69 @@
                 <div class="portfolio_popup-content grid">
                     <span class="portfolio_popup-close"><i class="uil uil-times"></i></span>
                     <div class="pp_thumbnail">
-                        <img src="assets/img/work-2.webp" alt="" class="portfolio_popup-img">
+                        <img src="assets/img/drone_cv.webp" alt="" class="portfolio_popup-img">
                     </div>
                     <div class="portfolio_popup-info">
                         <div class="portfolio_popup-subtitle">Featured - <span> Computer Vision</span></div>
                         <div class="portfolio_popup-body">
-                            <h3 class="details_title">Personal AI Trainer</h3>
-                            <p class="details_description">Welcome to the future of fitness training,
-                                where artificial intelligence meets physical exercise. Our AI Trainer 
-                                uses pose estimation to identify key points on your body. 
-                                It then calculates the angles between these points to recognize various gestures, 
-                                including the number of biceps curls you've done.</p>
-                                <ul class="details_info">
-                                    <li>Created - <span>4 dec 2020</span></li>
-                                    <li>Technologies - <span>OpenCV, Python</span></li>
-                                    <li>Role - <span>Full Stack Data Scientist</span></li>
-                                    <li>View - <span><a href="#">www.domain.coassfdafm</a></span></li>
-                                </ul>
+                            <h3 class="details_title">Control drone using gesture recognition algorithms and enable facial tracking for autonomous following.</h3>
+                        <p class="details_description">In this project, a drone is controlled using gesture recognition algorithms and facial tracking capabilities. 
+                            Utilizing OpenCV and Python, the system is designed to interpret specific hand or body gestures as commands for the drone's movement, such as take-off, landing, or changing direction.
+                             Additionally, the drone is equipped with facial tracking features, allowing it to autonomously follow a targeted individual by recognizing and locking onto their face. 
+                             The combination of gesture-based control and facial tracking provides a seamless and interactive experience for controlling the drone. </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Aug 2023</span></li>
+                                <li>Technologies - <span>OpenCV, Python</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/drone" target="_blank">github repo</a></span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!--===== Services =====-->
-        <!-- <section class="services section" id="services">
-            <h2 data-heading="Services" class="section_title" >What I offer</h2>
-
-            <div class="services_container container grid">
-                <div class="services_content">
-                    <div>
-                        <i class="uil uil-web-grid services_icon"></i>
-                        <h3 class="services_title">End to End ML Product</h3>
-                    </div>
-
-                    <span class="services_button">
-                        View More <i class="uil uil-arrow-right services_button-icon"></i>
-                    </span>
-                    <div class="services_modal">
-                        <div class="services_modal-content">
-                            <i class="uil uil-times services_modal-close"></i>
-                            <h3 class="services_modal-title">AI & ML Products</h3>
-                            <p class="services_modal-description">Experience in
-                            delivering high quality useable AI solutions</p>
-                            
-                            <ul class="services_modal-services grid">
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">I designed the architecture</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">I developed UI</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">Developed logic and data flow</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">Built data pipeline</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">CI/Cd pipeline</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="services_content">
-                    <div>
-                        <i class="uil uil-arrow services_icon"></i>
-                        <h3 class="services_title">Data Science Consultant</h3>
-                    </div>
-
-                    <span class="services_button">
-                        View More <i class="uil uil-arrow-right services_button-icon"></i>
-                    </span>
-                    
-                    <div class="services_modal">
-                        <div class="services_modal-content">
-                            <i class="uil uil-times services_modal-close"></i>
-
-                            <h3 class="services_modal-title">DS app Advisory</h3>
-                            <p class="services_modal-description">Services with morethan 3 years or exp.
-                            Providing high quality ML apps</p>
-                            
-                            <ul class="services_modal-services grid">
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">I designed the architecture</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">I developed UI</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">Developed logic and data flow</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">Built data pipeline</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">CI/Cd pipeline</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="services_content">
-                    <div>
-                        <i class="uil uil-edit services_icon"></i>
-                        <h3 class="services_title">Data Architect <br><br> </h3>
-                    </div>
-
-                    <span class="services_button">
-                        View More <i class="uil uil-arrow-right services_button-icon"></i>
-                    </span>
-
-                    <div class="services_modal">
-                        <div class="services_modal-content">
-                            <i class="uil uil-times services_modal-close"></i>
-
-                            <h3 class="services_modal-title">ML app Design</h3>
-                            <p class="services_modal-description">Services with morethan 3 years or exp.
-                            Providing high quality ML apps</p>
-                            
-                            <ul class="services_modal-services grid">
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">I designed the architecture</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">I developed UI</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">Developed logic and data flow</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">Built data pipeline</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p class="services_modal-info">CI/Cd pipeline</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        
-
         <!-- NEW SERVICES -->
         <section class="services section" id="services">
         <h2 data-heading="Services" class="section_title" >What I offer</h2>
         <!-- <div class="main__cards cards"> -->
             <div class="services_container container grid">
             <div class="cards__inner">
-                <div class="cards__card card">
-                    <h2 class="card__heading">FREE Consultation</h2>
-                    <h2 class="card__price">€ FREE</h2>
-                    <ul class="card__bullets flow" role="list">
-                        <li><span class="card_icon">🚀</span>Product Visioning</li>
-                        <li><span class="card_icon">🛠️</span>Tech Stack Guidance</li>
-                        <li><span class="card_icon">💰</span>Cost Forecasting</li>
-                        <li><span class="card_icon">🔄</span>Agile 101</li>
-
+                <!-- Free Consultation -->
+                  <div class="cards__card card">
+                    <h2 class="card__heading">FREE (30 MINUTES)</h2>
+                    <p class="card__price">€ 0.00</p>
+                    <ul role="list" class="card__bullets flow">
+                      <li>Product Visioning<span class="card_icon">🚀</span></li>
+                      <li>Brain Storming<span class="card_icon">🌀</span></li>
+                      <li>Tech Stack<span class="card_icon">🛠️</span></li>
+                      <li>Cost Forecasting<span class="card_icon">💰</span></li>
+                      <li>Agile 101<span class="card_icon">🔄</span></li>
                     </ul>
-                    <!-- <a class="card__cta cta" href="#basic">BOOK NOW</a> -->
-                    <form action="https://cal.com/nizamsyed/free-consultation" method="get" target="_blank">
-                        <button class="glow-on-hover" type="submit">BOOK NOW</button>
-                    </form>
-                </div>
-                <div class="cards__card card">
-                    <h2 class="card__heading">Full Stack AI App development</h2>
-                    <h2 class="card__price">From € 999</h2>
-                    <ul class="card__bullets flow" role="list">
-                        <li><span class="card_icon">🚀</span>Supercharge Your Project with Tailored AI Solutions</li>
-                        <li><span class="card_icon">🌐</span>Elevate User Experience Across All Platforms</li>
-                        <li><span class="card_icon">🔒</span>Fortify Your System with Top-Notch Security</li>
-                        <li><span class="card_icon">📈</span>Unlock Explosive Growth with Data Insights</li>
-
+                    <a href="https://cal.com/nizamsyed/free-consultation" class="card__cta cta" target="_blank">BOOK NOW</a>
+                  </div>
+            
+                  <!-- Paid Consultation -->
+                  <div class="cards__card card">
+                    <h2 class="card__heading">KICKSTART (NO TIME LIMIT)</h2>
+                    <p class="card__price">€ -</p>
+                    <ul role="list" class="card__bullets flow">
+                      <li>Tailored AI Solution<span class="card_icon">🚀</span></li>
+                      <li>UI/UX Desgin<span class="card_icon">🌃</span></li>
+                      <li>Rapid Prototyping<span class="card_icon">🧑🏻‍💻</span></li>
+                      <li>App Building<span class="card_icon">⏳</span></li>
+                      <li>Cloud Deployment<span class="card_icon">🌐</span></li>
                     </ul>
-                    <form action="https://cal.com/nizamsyed/ai-development" method="get" target="_blank">
-                        <button class="glow-on-hover" type="submit" >BOOK NOW</button>
-                    </form>
+                    <a href="https://cal.com/nizamsyed/ai-development" class="card__cta cta" target="_blank">BOOK NOW</a>
+                  </div>
                 </div>
-            </div>
             <div class="overlay cards__inner"></div>
         </div>
         </section>
+
+
         <!--===== Testimonials / Endorsement =====-->
-        <section class="testimonials section">
+        <section class="testimonials section" id="testimonials">
             <h2 data-heading="Testimonials from my colleagues" class="section_title" >Endorsement</h2>
 
             <div class="testimonials_container container swiper">
@@ -768,13 +644,17 @@
                         <div class="testimonial_quote">
                             <i class='bx bxs-quote-alt-left'></i>
                         </div>
-                        <p class="testimonial_description"> Amazing colleague.......</p>
-                        <h3 class="testimonial_date">March 27. 2020</h3>
+                        <p class="testimonial_description">Nizam is an extremely accomplished AI engineer and an even better colleague. 
+                            Always friendly, good-humored and solution-oriented at all times. 
+                            He also never misses an opportunity to develop in his field every day. 
+                            In doing so, he achieves outstanding results and solutions in every project. 
+                            Any team would be lucky to have someone like Nizam on board.</p>
+                        <h3 class="testimonial_date">August 31. 2023</h3>
                         <div class="testimonial_profile">
-                            <img src="assets/img/client1.jpg" alt="" class="testimonial_profile-img">
+                            <img src="assets/img/niko_lsbg.jpeg" alt="" class="testimonial_profile-img">
                             <div class="testimonial_profile-data">
-                                <span class="testimonial_profile-name">Sneha Nichani</span>
-                                <span class="testimonial_profile-detail">Director of a Company</span>
+                                <span class="testimonial_profile-name">Nikolai Merkel</span>
+                                <span class="testimonial_profile-detail">Product Owner @ LSBG, Hamburg</span>
                             </div>
                         </div>
                     </div>
@@ -882,11 +762,10 @@
 
                         <!-- Email -->
                         <div class="contact_card">
-                            <a href="mailto:iamsyed.05@gmail.com">
+                            <a href="mailto:contact.nizamsyed@gmail.com">
                                 <i class="uil uil-envelope-edit info_icon"></i>
                                 <div>
                                     <h3 class="info_title">Email</h3>
-                                    <!-- <span class="info_subtitle">iamsyed[dot]05[at]gmail[dot]com</span> -->
                                     <span class="contact_button">
                                         Write me <i class="uil uil-arrow-right contact_button-icon"></i>
                                     </span>
@@ -966,7 +845,7 @@
                         </div><br>
 
                         <!-- Submit button -->
-                        <button type="submit" class="button"><i class="uil uil-navigator button_icon"></i>
+                        <button type="submit" class="send_message_button"><i class="uil uil-navigator button_icon"></i>
                             Send Message
                         </button>
                     </form>
@@ -1005,22 +884,26 @@
                         <a href="https://github.com/nizamuddinsyed" target="_blank" class="footer_social-links">
                             <i class="uil uil-github"></i>
                         </a>
-                        <a href="https://www.kaggle.com/syednizamuddin" target="_blank" class="footer_social-links">
+                        <!-- <a href="https://www.kaggle.com/syednizamuddin" target="_blank" class="footer_social-links">
                             <i class="uil uil-brackets-curly"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <p class="footer-heart">
                     Made with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
-                  <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a href="">Nizam</a>
+                  <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> in Germany
                   </p>
                 <p class="footer_copy">&copy Nizam Syed | All Rights Reserved</p>
             </div>
+
+            <a href="#" id="scroll" style="display: none;"><span></span></a>
         </footer>
     </main>
 
-    <!--========== SCROLL UP ==========-->
-    
+    <!-- BACK TO TOP BUTTON -->
+	<a href="#" class="back-to-top" >
+		<span class="uil uil-angle-up"></span>
+	</a>
 
     <!--========== MIXITUP FILTER ==========-->
     <script src="assets/js/mixitup.min.js"></script>
