@@ -69,6 +69,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body,
 button,
 input {
@@ -400,21 +401,28 @@ button, input {
     color: inherit;
 }
 /*===== Buttons =====*/
-.button {
+
+.button_container {
+      display: inline-flex;
+      /* width: 100%; */
+      text-align: center;
+      /* margin-right: 10px; */
+    }
+
+.about_button {
     display: inline-flex;
     align-items: center;
     column-gap: .5rem;
     background-color: var(--skin-color);
     color: var(--title-color);
     padding: .75rem 1.4rem;
-    border-radius: .25rem;
+    border-radius: 0.30rem;
     font-weight: var(--font-medium);
     position: relative;
     z-index: 1;
-    border: 1px dashed black;
+    margin-right: 2em;
 }
-
-.button::after{
+.about_button::after{
     position: absolute;
     content: '';
     left: 0;
@@ -429,7 +437,114 @@ button, input {
     transition: .3s;
 }
 
-.button:hover::after {
+.about_button:hover::after {
+    transform: scale(1);
+}
+
+/* Download CV Button */
+
+.cv_button {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: .75rem 1.4rem;
+    border-radius: 0.30rem;
+    font-weight: var(--font-medium);
+    position: relative;
+    z-index: 1;
+}
+
+.cv_button::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #17181c;
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+.cv_button:hover::after {
+    transform: scale(1);
+}
+
+/* send_message_button */
+
+.send_message_button {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: .75rem 1.4rem;
+    border-radius: 0.30rem;
+    font-weight: var(--font-medium);
+    position: relative;
+    z-index: 1;
+    
+    /* border: 1px dashed black; */
+}
+
+.send_message_button::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #17181c;
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.send_message_button:hover::after {
+    transform: scale(1);
+}
+
+/* About Contact Me button */
+
+.about_contact_button {
+    
+    display: inline-flex;
+    width: 200px;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: .75rem 1.4rem;
+    border-radius: 0.30rem;
+    font-weight: var(--font-medium);
+    position: relative;
+    z-index: 1;
+    
+    /* border: 1px dashed black; */
+}
+
+.about_contact_button::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #17181c;
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.about_contact_button:hover::after {
     transform: scale(1);
 }
 
@@ -437,17 +552,13 @@ button, input {
     font-size: 1.25rem;
 }
 
-/* ADDED CV BUTTON CSS */
-/* add space between More about me and Download CV buttons */
-.space {
-  width: 20px;
-  height: auto;
-  display: inline-block;
-}
 
-.cv_button_icon {
-    font-size: 1.25rem;
-}
+/* glow effect on hover */
+.about_box:hover{
+    box-shadow: 0 0 10px 5px var(--skin-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
 
 /*===== About Section =====*/
 
@@ -455,6 +566,7 @@ button, input {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
     align-items: center;
+    /* margin-top: var(--mb-0-25) */
 }
 .about_img {
     width: 600px;
@@ -598,7 +710,6 @@ a {
     display: flex;
     align-items: center;
     cursor: pointer;
-
 }
 
 .skills_header:not(:last-child) {
@@ -696,10 +807,12 @@ a {
 .portfolio_item-details {
     display: none;
 }
-
+  
 .work_img {
     border-radius: .5rem;
     margin-bottom: var(--mb-1);
+    height: 220px;
+    width: 300px;
 }
 .work_title {
     font-size: var(--normal-font-size);
@@ -783,6 +896,7 @@ a {
 .portfolio_popup-subtitle {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-0-25);
+    color: var(--skin-color);
 
 }
 .details_title {
@@ -794,6 +908,7 @@ a {
 .details_description {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-2);
+    text-align: auto;
 }
 .details_info li {
     margin-bottom: var(--mb-0-75);
@@ -816,20 +931,20 @@ a {
 
 /* New Services */
 
-/* Book now button animation */
-.glow-on-hover {
+/* BOOK NOW -  animation */
+.card__cta {
     width: 250px;
     height: 50px;
     border: none;
     outline: none;
-    color: var(--skin-color);
-    background: var(--box-color);
+    /* color: var(--skin-color);
+    background: var(--box-color); */
     position: relative;
     z-index: 0;
     border-radius: 10px;
   }
   
-  .glow-on-hover:before {
+  .card__cta:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     /* background: linear-gradient(45deg, #e1094a, #e1094a, purple, #e1094a); */
@@ -847,19 +962,19 @@ a {
     border-radius: 10px;
   }
   
-  .glow-on-hover:active {
+  .card__cta:active {
     color: #000;
   }
   
-  .glow-on-hover:active:after {
+  .card__cta:active:after {
     background: transparent;
   }
   
-  .glow-on-hover:hover:before {
+  .card__cta:hover:before {
     opacity: 1;
   }
   
-  .glow-on-hover:after {
+  .card__cta:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -880,8 +995,9 @@ a {
 li::before {
     content: '\2003'; /* Three en space characters */
 }
+
 .card_icon {
-    margin-right: 20px; /* Adjust this value to your preference */
+  margin-left: 10px; /* Adjust this value to your preference */
 }
 
 li {
@@ -904,15 +1020,18 @@ li {
   .cards__inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5em;
+    flex-basis: auto;
+    gap: 4em;
     padding-top: 5em;
-    padding-bottom: 3em;
+    padding-bottom: 0.1em;
   }
   
   .card {
-    --flow-space: 0.5em;
+    --flow-space: 0.1em;
+    flex-basis: auto;
     /* --hsl: var(--hue), var(--saturation), var(--lightness); */
-    flex: 1 1 14rem;
+    flex: 1 1 auto;
+    /* flex: 1 1 14rem;  */
     padding: 1.5em 2em;
     display: grid;
     grid-template-rows: auto auto auto 1fr;
@@ -922,20 +1041,56 @@ li {
     border: 1px solid #eceff133;
     border-radius: 15px;
   }
+  .card__heading {
+    font-size: 1.05em;
+    font-weight: 600;
+  }
+  .card__price {
+    font-size: 1.75em;
+    font-weight: 700;
+  }
+  .flow > * + * {
+    margin-top: var(--flow-space, 1.25em);
+  }
   
+  .cta {
+    display: block;
+    align-self: end;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    /* color: #fff; */
+    /* background-color: #0d0d0d; */
+    padding: 0.7em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .card__bullets {
+    line-height: 1.3;
+  }
+  
+  .card__bullets li::before {
+    display: inline-block;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='16' title='check' fill='%23dddddd'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z' /%3E%3C/svg%3E");
+    transform: translatey(0.25ch);
+    margin-right: 1ch;
+  }
+
   .services_container {
-    /* justify-self: auto; */
-    justify-content: auto;
-    justify-items: auto;
+    justify-content: center;
     column-gap: 1.5rem;
+    margin-bottom: 1ch;
 }
   
   .card:hover {
       /* box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2); */
-      box-shadow: 0 0 3px 3px var(--skin-color);
-      transform: scale(1.05);
+      box-shadow: 0 0 20px 5px var(--skin-color);
+      /* transform: scale(1.05); */
       transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
+
 
 /*===== Services Section =====*/
 
@@ -1135,6 +1290,9 @@ li {
     color: var(--skin-color);
 }
 
+/* Endorsement */
+
+
 /*===== Contact Section =====*/
 
 .contact_container {
@@ -1190,6 +1348,12 @@ li {
 .contact_button:hover .contact_button-icon{
     transform: translateX(.25rem);
 }
+
+/* glow effect on hover */
+.contact_card:hover{
+    box-shadow: 0 0 10px 5px var(--skin-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
 
 .input_container {
     position: relative;
@@ -1306,6 +1470,8 @@ textarea.input {
     width: 50%;
     opacity: 1;
 }
+
+
 /*=============== FOOTER ===============*/
 
 .footer {
@@ -1359,28 +1525,13 @@ textarea.input {
     margin-top: 1rem;
 }
 /* Footer Heart */
+
 .footer-heart{
     font-size: var(--small-font-size);
     margin-top: 4.5rem;
     text-align:center;
 }
 
-.footer-heart a{
-    border-bottom: 1px solid var(--skin-color);
-    /* color: #453886; */
-    padding-bottom: .25em;
-    text-decoration: none;
-}
-
-.footer-heart a:hover{
-    color:var(--skin-color);
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: bottom;
-  background-repeat: repeat-x;
-  background-size: 20%;
-  border-bottom: 0;
-  padding-bottom: .3em;
-  text-decoration: none;}
 
 .emoji{
     vertical-align: middle;
@@ -1392,34 +1543,59 @@ textarea.input {
 .footer_social {
     color: var(--title-color);
 }
-/*=============== SCROLL UP ===============*/
-::-webkit-scrollbar {
-    width: .60rem;
-    background-color: var(--scroll-bar-color);
-    border-radius: 2rem;
+
+
+/* BACK TO TOP */
+
+html {
+	scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-thumb-color);
-    border-radius: 2rem;
+.back-to-top {
+    height: 2.5rem;
+    width: 2.5rem;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	/* background-color: var(--skin-color); */
+	border-radius: 50rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
 }
 
-/* Show Scroll Up*/
+.back-to-top span {
+	/* color: #fff; */
+	font-size: 3rem;
+	transition: 0.2s ease-out;
+}
 
+.back-to-top:hover {
+    box-shadow: 0 0 10px 5px var(--skin-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.back-to-top:hover span {
+	transform: translateY(-4px);
+}
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-    width: .60rem;
+    /* width: .60rem; */
+    width: 0.5rem;
     background-color: var(--scroll-bar-color);
     border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-thumb-color);
+    background-color: var(--skin-color);
     border-radius: .5rem;
 }
 
 /*========== BREAKPOINTS ==========*/
+
 /* For Large Devices */
 @media screen and (max-width: 1408px) {
     .container {
@@ -1542,7 +1718,9 @@ textarea.input {
     }
 
     .services_container {
-        grid-template-columns: repeat(3, 220px);
+        /* grid-template-columns: repeat(3, 220px); */
+        grid-template-columns: auto;
+
     }
 
     .testimonial_card {
@@ -1715,13 +1893,11 @@ textarea.input {
         margin-right: var(--mb-1);
     }
 
+
     .home_img {
         width: 200px;
     }
 
-    .home_title {
-        font-size: var(--h1-font-size);
-    }
 
     .home_subtitle {
         font-size: var(--normal-font-size);
@@ -1735,7 +1911,8 @@ textarea.input {
     .contact_container,
     .work_container,
     .skills_container,
-    .qualification_container {
+    .qualification_container,
+    .button_container {
         grid-template-columns: 1fr;
     }
 
@@ -1750,7 +1927,9 @@ textarea.input {
         column-gap: .25rem;
     }
     .services_container {
-        grid-template-columns: max-content;
+        /* grid-template-columns: max-content; */
+        grid-template-columns: auto;
+
     }
     .services_content {
         padding-right: 3.5rem;
