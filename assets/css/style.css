@@ -554,10 +554,10 @@ button, input {
 
 
 /* glow effect on hover */
-.about_box:hover{
+/* .about_box:hover{
     box-shadow: 0 0 10px 5px var(--skin-color);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
+  } */
 
 
 /*===== About Section =====*/
@@ -702,7 +702,7 @@ a {
 
 .skills_container {
     grid-template-columns: 360px 320px;
-    column-gap: 3rem;
+    column-gap: 4rem;
     justify-content: center;
 }
 
@@ -717,7 +717,7 @@ a {
 }
 .skills_icon,
 .skills_arrow {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--skin-color);
 }
 .skills_icon {
@@ -736,7 +736,7 @@ a {
 }
 .skills_active .skills_arrow {
     transform: rotate(-90deg);
-    transition: .3s;
+    transition: .4s;
 }
 .skills [data-content] {
     display: none;
@@ -772,7 +772,92 @@ a {
     background-color: var(--skin-color);
 }
 
+/* skills box */
+.skill_box {
+    text-align: center;
+    border-radius: .50rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--box-color);
+}
+/* glow effect on hover */
+.skill_box:hover{
+    box-shadow: 0 0 10px 5px var(--skin-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
 
+
+/*=====  Animated new Skillset =====*/
+.app {
+    /* min-height: auto; */
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  
+  header { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    text-align: center;
+  }
+  
+  .tag-list {
+    width: 65rem; /* to adjust width*/
+    max-width: 90vw;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem 0;
+    position: relative;
+    padding: 1.5rem 0;
+    overflow: hidden;
+    /* background: linear-gradient(
+        to left,
+        var(--body-color) 0%,
+        var(--box-color) 10%,
+        var(--box-color)90%,
+        var(--body-color) 100%
+      ); */
+
+  }
+  
+  .loop-slider {
+    .inner {
+      display: flex;
+      /* width: fit-content; */
+      animation-name: loop;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: var(--direction);
+      animation-duration: var(--duration);
+    }
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: #e2e8f0;
+    font-size: var(--small-font-size);
+    background-color: var(--box-color);
+    border-radius: 0.4rem;
+    padding: 0.7rem 2rem;
+    margin-right: 1.5rem;
+    box-shadow: 0 0 8px 0.6px var(--skin-color);
+  }
+  
+  @keyframes loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 
 /*===== Work Section =====*/
 
@@ -1245,6 +1330,7 @@ li {
 .testimonial_description {
     margin-bottom: var(--mb-1);
     font-size: var(--small-font-size);
+    display: flex;
 }
 .testimonial_date {
     font-size: var(--normal-font-size);
@@ -1278,6 +1364,9 @@ li {
 }
 
 /* Swiper Class */
+
+
+
 .swiper-pagination-bullet {
     background-color: var(--skin-color);
 }

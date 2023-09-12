@@ -165,6 +165,7 @@ modalCloses.forEach((modalClose) => {
 let swiper = new Swiper('.testimonials_container', {
     // spaceBetween: 24,    
     effect: "coverflow",
+    initialSlide:1,
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
