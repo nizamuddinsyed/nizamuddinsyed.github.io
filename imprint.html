@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <aside class="sidebar" id="sidebar">
-        <nav class="nav">
-            <div class="nav_logo">
-                <a href="index.html" class="nav_logo-text">N</a>
-            </div>
-        </nav>
-    </aside>
-
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +17,20 @@
                 background-color: hsl(var(--hue-color), 14%, 10%);
                 border-radius: 8px;
             }
+            #back-home-button {
+            display: block;
+            margin: 20px auto;
+            padding: .75rem 1.4rem;
+            background-color: rgba(245, 245, 245, 0.636);
+            color:black;
+            font-weight: var(--font-medium);
+            border-radius:0.30rem;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+        #back-home-button:hover {
+            background-color: var(--skin-color);
+        }
         </style>
 
 </head>
@@ -64,6 +70,14 @@
         <br>
         <p>All other photos on this website are protected by copyright. The rights to it belong exclusively to me specially my images. Further use outside the narrow limits of copyright law, on download sites, data carriers or collection via electronic media is only possible with my express prior consent.</p>
 
+        <br>
+        <button id="back-home-button" onclick="goBack()">Back to Home</button>
     </div>
+    
+    <script>
+        function goBack() {
+            window.location.href = "/";
+        }
+    </script>
 </body>
 </html>
