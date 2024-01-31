@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Protection</title>
+        <!--========== MAIN CSS ==========-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" href="/assets/img/icon-n.png" type="image/icon type">
+        
+        <style>
+            #data-protection-container {
+                max-width: 1200px;
+                margin: 100px auto;
+                padding: 20px;
+                background-color: hsl(var(--hue-color), 14%, 10%);
+                border-radius: 8px;
+            }
+            #back-home-button {
+            display: block;
+            margin: 20px auto;
+            padding: .75rem 1.4rem;
+            background-color: rgba(245, 245, 245, 0.636);
+            color:black;
+            font-weight: var(--font-medium);
+            border-radius:0.30rem;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+        #back-home-button:hover {
+            background-color: var(--skin-color);
+        }
+        </style>
+
+</head>
+<body>
+    <div id="data-protection-container">
+        <h1>Data Protection</h1>
+        <br>
+        <h2>Data Protection at a glance</h2>
+        <p>We don't keep/store any sort of user data who visit our website, users who contact us by filling the contact form or by sending an email, their data 
+            is used only till the meeting happens, after that their data is also deleted. The website uses plugins and tools such as Google Web Fonts etc to improve the user experience.
+        </p>
+
+    <button id="back-home-button" onclick="goBack()">Back to Home</button>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
