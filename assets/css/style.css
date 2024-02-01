@@ -1032,7 +1032,6 @@ a {
   .card__cta:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    /* background: linear-gradient(45deg, #e1094a, #e1094a, purple, #e1094a); */
     position: absolute;
     top: -2px;
     left:-2px;
@@ -1044,7 +1043,7 @@ a {
     animation: glowing 10s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 1px;
   }
   
   .card__cta:active {
@@ -1073,7 +1072,7 @@ a {
   
   @keyframes glowing {
     0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
+    50% { background-position: 400% 0; }    
     100% { background-position: 0 0; }
   }
   
@@ -1171,7 +1170,7 @@ li {
   
   .card:hover {
       /* box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2); */
-      box-shadow: 0 0 20px 5px var(--skin-color);
+      box-shadow: 0 0 10px 1px var(--skin-color);
       /* transform: scale(1.05); */
       transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
@@ -1440,7 +1439,7 @@ li {
 
 /* glow effect on hover */
 .contact_card:hover{
-    box-shadow: 0 0 10px 5px var(--skin-color);
+    box-shadow: 0 0 10px 1px var(--skin-color);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
 
@@ -1584,6 +1583,7 @@ textarea.input {
 .footer_title {
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-0-25);
+
 }
 
 .footer_subtitle {
@@ -1650,7 +1650,7 @@ html {
 	align-items: center;
 	justify-content: center;
 	/* background-color: var(--skin-color); */
-	border-radius: 50rem;
+	border-radius: 1rem;
 	padding: 0.5rem;
 	text-decoration: none;
 	transition: 0.2s ease-out;
@@ -1663,7 +1663,7 @@ html {
 }
 
 .back-to-top:hover {
-    box-shadow: 0 0 10px 5px var(--skin-color);
+    box-shadow: 0 0 5px 1px var(--skin-color);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .back-to-top:hover span {
