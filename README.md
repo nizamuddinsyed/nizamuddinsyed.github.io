@@ -42,4 +42,6 @@ Contributions to improve the website's features, fix any issues, or enhance its 
 This project is licensed under the [Creative Commons License(CC BY 4.0)], allowing you to use this template and customize it as needed. You must give appropriate credit to the original creator, provide a link to the license, and indicate if any changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
 ---
-If you have any questions or suggestions, feel free to reach out @contact[dot]nizamsyed[at]gmail[dot]com. Happy coding!
+If you have any questions or suggestions, feel free to reach out @ contact [dot] nizamsyed [at] gmail [dot] com.
+
+Happy coding!
