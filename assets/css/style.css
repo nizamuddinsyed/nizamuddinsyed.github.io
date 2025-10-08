@@ -1657,33 +1657,48 @@ html {
 }
 
 .back-to-top {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
 	position: fixed;
 	bottom: 2rem;
 	right: 2rem;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	/* background-color: var(--skin-color); */
-	border-radius: 1rem;
-	padding: 0.5rem;
+	background: linear-gradient(135deg, var(--skin-color) 0%, #ff8c69 100%);
+	border-radius: 50%;
+	padding: 0;
 	text-decoration: none;
-	transition: 0.2s ease-out;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+}
+
+.back-to-top.show {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 .back-to-top span {
-	/* color: #fff; */
-	font-size: 3rem;
-	transition: 0.2s ease-out;
+	color: var(--title-color);
+	font-size: 1.5rem;
+	transition: all 0.3s ease;
+	line-height: 1;
 }
 
 .back-to-top:hover {
-    box-shadow: 0 0 5px 1px var(--skin-color);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+	transform: translateY(-3px);
+	box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+	background: linear-gradient(135deg, #ff8c69 0%, var(--skin-color) 100%);
 }
+
 .back-to-top:hover span {
-	transform: translateY(-4px);
+	transform: translateY(-2px);
+	color: #ffffff;
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -1998,11 +2013,9 @@ html {
         margin-right: var(--mb-1);
     }
 
-
     .home_img {
         width: 200px;
     }
-
 
     .home_subtitle {
         font-size: var(--normal-font-size);
@@ -2032,11 +2045,21 @@ html {
         column-gap: .25rem;
     }
     .services_container {
-        /* grid-template-columns: max-content; */
         grid-template-columns: auto;
-
     }
     .services_content {
         padding-right: 3.5rem;
+    }
+
+    /* Scroll to top button for mobile */
+    .back-to-top {
+        height: 3rem;
+        width: 3rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .back-to-top span {
+        font-size: 1.2rem;
     }
 }

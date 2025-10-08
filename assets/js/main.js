@@ -255,4 +255,27 @@ form.action = "https://formsubmit.co/" + userEmail;
 
 /*=============== SHOW SCROLL UP ===============*/
 
+const scrollUp = document.querySelector(".back-to-top");
+
+function scrollUpFunc() {
+    if (this.scrollY >= 560) {
+        scrollUp.classList.add("show");
+    } else {
+        scrollUp.classList.remove("show");
+    }
+}
+
+window.addEventListener("scroll", scrollUpFunc);
+
+// Scroll to top when button is clicked
+if (scrollUp) {
+    scrollUp.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
 
