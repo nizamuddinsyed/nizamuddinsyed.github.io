@@ -1,81 +1,1109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z2D5MTDT3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9Z2D5MTDT3');
+    </script>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Portfolio | Creative Data Solutions</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
-    <!-- Load third-party libraries before main.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!--========== UNICONS ==========-->
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css"> --> 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--========== BOXICONS ==========-->
+    <!--  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!--========== MAIN CSS ==========-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" href="assets/img/icon-n.png" type="image/png">
+    <title>Nizam - Portfolio</title>
 </head>
+
 <body>
-    <div id="particles-js"></div>
     
-    <nav class="nav">
-        <div class="nav__container">
-            <a href="#" class="nav__logo">DS</a>
-            <div class="nav__menu">
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+    <!--========== SIDEBAR ==========-->
+    <div class="nav_toggle" id="nav-toggle">
+        <i class="uil uil-bars"></i>
+    </div>
+    <aside class="sidebar" id="sidebar">
+        <nav class="nav">
+            <div class="nav_logo">
+                <a href="#home" class="nav_logo-text">N</a>
+            </div>
+            <div class="nav_menu">
+                <div class="menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active-link">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#about" class="nav_link">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#skills" class="nav_link">Skills</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#work" class="nav_link">Work</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#services" class="nav_link">Services</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#testimonials" class="nav_link">Testimonials</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#contact" class="nav_link">Contact</a>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+            <div class="btn_share">
+                <i class="uil uil-shield-check"></i>
+            </div>
+
+            <div class="nav_close" id="nav-close">
+                <i class="uil uil-times"></i>
+            </div>
+        </nav>
+    </aside>
+    <!--========== MAIN ==========-->
+    <main class="main">
+        <!--===== Home =====-->
+        <section class="home" id="home">
+            <div class="home_container container grid">
+                <div class="home_social">
+                    <span class="home_social-follow">Follow Me</span>
+                    <div class="home_social-links">
+                        <a href="https://www.linkedin.com/in/syed-nizam-uddin/" target="_blank" class="home_social-links">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/nizamuddinsyed" target="_blank" class="home_social-links">
+                            <i class="uil uil-github"></i>
+                        </a>
+                        <!-- <a href="https://www.kaggle.com/syednizamuddin" target="_blank" class="home_social-links">
+                            <i class="uil uil-brackets-curly"></i>
+                        </a> -->
+                    </div>
+                </div>
+
+                <img src="/assets/img/home-nizam-bg.jpeg" alt="" class="home_img">
+
+                
+
+                 <div class="home_data">
+                    <h1 class="home_title"> &gt; Hi, I'm Nizam
+                        <!-- <span class="typed-text"></span>
+                        <span class="cursor">&nbsp</span> -->
+                    </h1>
+                    <p class="home_description"></p>
+                    <p class="home_description"><q><i>Data is my art, models are my medium, insights are my masterpieces.</i></p>
+                        <!-- buttons container |About Me| and |Download CV| -->
+                    <div class="button_container">
+                        <a href="#about" class="about_button">
+                            <i class="uil uil-user button_icon"></i>
+                            About Me
+                        </a>
+                        <!-- <a href="https://drive.google.com/uc?export=download&id=1biOD_M6rJPDfhDgHaww5ckgr54eeslm6" class="cv_button" target="_blank"> -->
+                        <a href="https://drive.google.com/file/d/1RfFo_U9KQ5tspDACqEWutAf2vgSrMTVQ/view?usp=sharing" class="cv_button" target="_blank">
+                            <i class="uil uil-file-download button_icon"></i>
+                            View CV
+                        </a>
+                    </div>
+
+                <div class="my_info">
+                    <!-- Telegram -->
+                    <div class="info_item">
+                        <a href="https://t.me/Nizzi05" target="_blank" class="info_link">
+                            <i class="uil uil-telegram-alt info_icon"></i>
+                            <div>
+                                <h3 class="info_title">Telegram</h3>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <!-- Whatsapp -->
+                    <div class="info_item">
+                        <!-- <a href="https://wa.me/01628792331" target="_blank" class="info_link"> -->
+                            <i class="uil uil-whatsapp info_icon"></i>
+                            <div>
+                                <h3 class="info_title">Whatsapp</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- email -->
+                    <div class="info_item">
+                        <a href="mailto:contact.nizamsyed@gmail.com" class="info_link">
+                            <i class="uil uil-envelope-edit info_icon"></i>
+                            <div>
+                                <h3 class="info_title">Email</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--===== About =====-->
+        <section class="about section" id="about">
+            <h2 data-heading="My Intro" class="section_title">About Me</h2>
+
+            <div class="about_container container grid">
+                <img src="assets/img/about-nizam-img.png" alt="" class="about_img">
+
+                <div class="about_data">
+                    <h3 class="about_heading">Hi, I'm Nizam, Based in Germany</h3>
+                    <p class="about_description">
+                        Data Scientist with a proven track record of delivering data-driven solutions that drive business growth and improve efficiency.
+                        Proficient in utilizing advanced analytics and machine learning to optimize processes, enhance predictive capabilities, and unlock valuable insights.
+                        Demonstrated ability to transform raw data into strategic intelligence, empowering companies to make informed decisions and stay ahead in today's data-driven landscape.
+                    </p>
+                    <div class="about_info grid">
+                        <div class="about_box">
+                            <i class="uil uil-award about_icon"></i>
+                            <h3 class="about_title">Exprience</h3>
+                            <span class="abouit_subtitle">7+ Years</span>
+                        </div>
+
+                        <div class="about_box">
+                            <i class="uil uil-suitcase about_icon"></i>
+                            <h3 class="about_title">Completed</h3>
+                            <span class="abouit_subtitle">20+ Projects</span>
+                        </div>
+
+                        <div class="about_box">
+                            <i class="uil uil-headphones about_icon"></i>
+                            <h3 class="about_title">AI</h3>
+                            <span class="abouit_subtitle">Support</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="about_contact_button">
+                        <i class="uil uil-navigator button_icon"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== Qualification =====-->
+        
+        <section class="qualification_section">
+            <h2 data-heading="My Journey" class="section_title" >Qualification & Professional Experience</h2>
+
+            <div class="qualification_container container grid">
+                <div class="education">
+                    <h3 class="qualification_title">
+                        <i class="uil uil-graduation-cap icon"></i>Education
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline_item">
+                            <div class="circle_dot"> </div>
+                            <h3 class="timeline_title">
+                                <a href="https://constructor.university/programs/graduate-education/data-engineering" target="_blank">Jacobs University (Bremen, Germany)</a>
+                            </h3>
+                            <p class="timeline_text">MSc. Data Engineer</p>
+                            <Span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                2018 - 2020
+                            </Span>
+                        </div>
+
+
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">
+                                <a href="https://www.knsit.com/" target="_blank">KNS Institute of Technological (Bengaluru, IND)</a>
+                            </h3>
+                            <p class="timeline_text">BE. Computer Science and Engineering</p>
+                            <Span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                2010 - 2014
+                            </Span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience">
+                    <h3 class="qualification_title">
+                        <i class="uil uil-suitcase icon"></i>Work Experience
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">
+                                <a href="https://lsbg.hamburg.de" target="_blank"> Landesbetrieb Straßen, Brücken und Gewässer (Hamburg, Germany) </a>
+                            </h3>
+                            <p class="timeline_text">Senior AI Engineer</p>
+                            <Span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                2020 - Present
+                            </Span>
+                        </div>
+
+
+                        <div class="timeline_item">
+                            <div class="circle_dot"></div>
+                            <h3 class="timeline_title">
+                                <a href="https://dxc.com/us/en" target="_blank">HP Inc / HP Enterprise / DXC Technologies (Bengaluru, IND)</a>
+                            </h3>
+                            <p class="timeline_text">Services Information Developer (Python, Big Data Hadoop)</p>
+                            <Span class="timeline_date"><i class="uil uil-calendar-alt"></i>
+                                2014 - 2018
+                            </Span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <!-- Animated new Skillset -->
+        <section class="skills section" id="skills">
+            <h2 data-heading="My Abilities" class="section_title" >Skill Set</h2> 
+        <div class="app">
+            <div class="tag-list">
+              <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
+                <div class="inner">
+                  <div class="tag"><span>#</span> Python</div>
+                  <div class="tag"><span>#</span> PyTorch</div>
+                  <div class="tag"><span>#</span> Tensorflow</div>
+                  <div class="tag"><span>#</span> Flask</div>
+                  <div class="tag"><span>#</span> Django</div>
+                  <div class="tag"><span>#</span> CV</div>
+                  <div class="tag"><span>#</span> HTML</div>
+                  <div class="tag"><span>#</span> Airflow</div>
+                  <div class="tag"><span>#</span> MQTT</div>
+                  <div class="tag"><span>#</span> MLOPS</div>
+                  <div class="tag"><span>#</span> IoT</div>
+                  <div class="tag"><span>#</span> Automation</div>
+                  <div class="tag"><span>#</span> Statistics</div>
+                  <div class="tag"><span>#</span> Azure</div>
+                  <div class="tag"><span>#</span> Cloud</div>
+                  <div class="tag"><span>#</span> Data_Analysis</div>
+                  <div class="tag"><span>#</span> Data_Science_Lifecycle</div>
+                </div>
+              </div>
+              <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
+                <div class="inner">
+                    <div class="tag"><span>#</span> Web_Development </div>
+                    <div class="tag"><span>#</span> App_Development</div>
+                    <div class="tag"><span>#</span> Machine_Learning</div>
+                    <div class="tag"><span>#</span> Data_Mining</div>
+                    <div class="tag"><span>#</span> Natural_Language_Processing</div>
+                    <div class="tag"><span>#</span> HTML</div>
+                    <div class="tag"><span>#</span> Chatbots</div>
+                    <div class="tag"><span>#</span> Transformer</div>
+                    <div class="tag"><span>#</span> ML_OPS</div>
+                    <div class="tag"><span>#</span> IoT</div>
+                    <div class="tag"><span>#</span> CI_CD</div>
+                    <div class="tag"><span>#</span> Jinja_Templating</div>
+                    <div class="tag"><span>#</span> Javascript</div>
+                    <div class="tag"><span>#</span> OSM</div>
+                    <div class="tag"><span>#</span> MapBox</div>
+                    <div class="tag"><span>#</span> Folium</div>
+                    <div class="tag"><span>#</span> JIRA</div>
+                    <div class="tag"><span>#</span> Agile</div>
+                    <div class="tag"><span>#</span> Scrum</div>
+                </div>
+              </div>
+              <div class="loop-slider" style="--duration:10449ms; --direction:normal;">
+                <div class="inner">
+                  <div class="tag"><span>#</span> Heroku</div>
+                  <div class="tag"><span>#</span> Github</div>
+                  <div class="tag"><span>#</span> Bitbucket</div>
+                  <div class="tag"><span>#</span> MongoDB</div>
+                  <div class="tag"><span>#</span> SQL</div>
+                  <div class="tag"><span>#</span> MariaDB</div>
+                  <div class="tag"><span>#</span> Hadoop</div>
+                  <div class="tag"><span>#</span> Hive</div>
+                  <div class="tag"><span>#</span> Sqoop</div>
+                  <div class="tag"><span>#</span> Oozie</div>
+                  <div class="tag"><span>#</span> Teraform</div>
+                  <div class="tag"><span>#</span> Zookeeper</div>
+                  <div class="tag"><span>#</span> ETL</div>
+                  <div class="tag"><span>#</span> Postman</div>
+                  <div class="tag"><span>#</span> GPU</div>
+                  <div class="tag"><span>#</span> Servers</div>
+                  <div class="tag"><span>#</span> Ubuntu</div>
+                </div>
+              </div>
+              <div class="loop-slider" style="--duration:16638ms; --direction:reverse;">
+                <div class="inner">
+                  <div class="tag"><span>#</span> Data_Storytelling</div>
+                  <div class="tag"><span>#</span> Bayesian_Statistics</div>
+                  <div class="tag"><span>#</span> Dimensionality_Reduction</div>
+                  <div class="tag"><span>#</span> Data_Warehousing</div>
+                  <div class="tag"><span>#</span> Data_Cleaning</div>
+                  <div class="tag"><span>#</span> Feature_Selection</div>
+                  <div class="tag"><span>#</span> HTML</div>
+                  <div class="tag"><span>#</span> CSS</div>
+                  <div class="tag"><span>#</span> Decision_Trees</div>
+                  <div class="tag"><span>#</span> Reinforcement_Learning</div>
+                  <div class="tag"><span>#</span> Canva</div>
+                  <div class="tag"><span>#</span> ChatGPT</div>
+                  <div class="tag"><span>#</span> Lean_Methodoligies</div>
+                  <div class="tag"><span>#</span> CSS</div>
+                  <div class="tag"><span>#</span> Prototyping</div>
+                  <div class="tag"><span>#</span> Experimental_Design</div>
+                </div>
+              </div>
+              <div class="loop-slider" style="--duration:15936ms; --direction:normal;">
+                <div class="inner">
+                  <div class="tag"><span>#</span>Big_data</div>
+                  <div class="tag"><span>#</span> Predictive_Modeling</div>
+                  <div class="tag"><span>#</span> Deep_Learning</div>
+                  <div class="tag"><span>#</span> Artificial_Intelligence</div>
+                  <div class="tag"><span>#</span> Spark</div>
+                  <div class="tag"><span>#</span> Data_Engineering</div>
+                  <div class="tag"><span>#</span> Data_pipeline</div>
+                  <div class="tag"><span>#</span> A/B_Testing</div>
+                  <div class="tag"><span>#</span> Feature_Engineering</div>
+                  <div class="tag"><span>#</span> Time_Series_Analysis</div>  
+                  <div class="tag"><span>#</span> Data_thics</div>
+                  <div class="tag"><span>#</span> Data_Governance</div>
+                  <div class="tag"><span>#</span> Data_Integration</div>
+                  <div class="tag"><span>#</span> Data_Security</div>
+                  <div class="tag"><span>#</span> Data_Imputation</div>
+                  <div class="tag"><span>#</span> Cross_Validation</div>
+                </div>
+              </div>
+              <div class="fade"></div>
+            </div>
+          </div>
+            </section>
+
+        <!--===== Skills =====-->
+        <!-- <section class="skills section" id="skills">
+            <h2 data-heading="My Abilities" class="section_title" >Skill set</h2>
+             
+            <div class="skills_container container grid">
+                <div class="skills_tabs">         
+                    <div class="skills_header skills_active skill_box" data-target="#frontend">
+                        <i class="uil uil-brackets-curly skills_icon"></i>
+                        <div>
+                            <h2 class="skills_tiile">AI Engineer</h2>
+                            <span class="skills_subtitles">More than 4 years</span>
+                        </div>
+                        <i class="uil uil-angle-double-down skills_arrow"></i>
+                    </div>
+                    
+                    <div class="skills_header skill_box" data-target="#backend">
+                        <i class="uil uil-cloud-database-tree skills_icon"></i>
+
+                        <div>
+                            <h1 class="skills_tiile">Big Data Engineer</h1>
+                            <span class="skills_subtitles">More than 3 years</span>
+                        </div>
+                        <i class="uil uil-angle-double-down skills_arrow"></i>
+                    </div>
+                
+                </div>
+
+                <div class="skills_content">
+                    <div class="skills_group skills_active" data-content id="frontend">
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Machine Learning & Deep Learning</h3>
+                                    <span class="skills_number">90%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Data Preprocessing & Analysis</h3>
+                                    <span class="skills_number">80%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Model Evaluation & Validation</h3>
+                                    <span class="skills_number">80%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Cloud Services & Databases</h3>
+                                    <span class="skills_number">80%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">HTML, CSS & Js</h3>
+                                    <span class="skills_number">40%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Communication & Presentation</h3>
+                                    <span class="skills_number">40%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="skills_group" data-content id="backend">
+                        <div class="skills_list grid">
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Database</h3>
+                                    <span class="skills_number">90%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 70%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Computer Vision</h3>
+                                    <span class="skills_number">80%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">Open source Apache</h3>
+                                    <span class="skills_number">80%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills_data">
+                                <div class="skills_titles">
+                                    <h3 class="skills_name">SQL</h3>
+                                    <span class="skills_number">70%</span>
+                                </div>
+
+                                <div class="skills_bar">
+                                    <span class="skills_percentage" style="width: 70%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </section> -->
+
+        <!--===== Recent Works =====-->
+        <section class="work section" id="work">
+            <h2 data-heading="My Portfolio" class="section_title" >Recent Works</h2>
+            
+            <div class="work_filters">
+                <span class="work_item active-work" data-filter="all">All</span>
+                <span class="work_item" data-filter=".cv">Computer Vision</span>
+                <span class="work_item" data-filter=".ml">Machine Learning</span>
+                <span class="work_item" data-filter=".dl">Deep Learning</span>
+                <span class="work_item" data-filter=".llm">Large Language Models</span>
+            </div>
+            <div class="work_container container grid">
+                <!-- project - 1 CV Drone-->
+                <div class="work_card mix cv">
+                    <img src="assets/img/drone_hand_gesture.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">Drone - Gesture Controlll & Face Following</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title"> Control drone using gesture recognition algorithms and enable facial tracking for autonomous following.</h3>
+                        <p class="details_description">In this project, a drone is controlled using gesture recognition algorithms and facial tracking capabilities. 
+                            Utilizing OpenCV and Python, the system is designed to interpret specific hand or body gestures as commands for the drone's movement, such as take-off, landing, or changing direction.
+                             Additionally, the drone is equipped with facial tracking features, allowing it to autonomously follow a targeted individual by recognizing and locking onto their face. 
+                             The combination of gesture-based control and facial tracking provides a seamless and interactive experience for controlling the drone. </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Aug 2023</span></li>
+                                <li>Technologies - <span>OpenCV, Python</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/drone" target="_blank">github repo</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+                <!-- Project - 2 CV photoshop-->
+                <div class="work_card mix cv">
+                    <img src="assets/img/photoshop_cv.png" alt="" class="work_img">
+                    <h3 class="work_title">Photoshop</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title"> A Simple Image Manipulation Tool with OpenCV</h3>
+                        <p class="details_description">Photoshop is a user-friendly, lightweight image Manipulation application built entirely using the html, css, js and OpenCV library. 
+                            The project aims to provide a simple yet effective demo for basic image manipulation tasks. 
+                            Designed to be intuitive and accessible.</p>
+                            <ul class="details_info">
+                                <li>Created - <span>Dec 2022</span></li>
+                                <li>Technologies - <span>HTML, CSS, JavaScript, OpenCV</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="http://niz.iblogger.org/?i=1" target="_blank">CLICK HERE FOR DEMO</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                <!-- Project - 3 CV Interactive Map-->
+                <div class="work_card mix cv">
+                    <img src="assets/img/interactiveMap.png" alt="" class="work_img">
+                    <h3 class="work_title">InteractiveMap</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title"> Welcome to a novel approach to map interaction that engages users through touch and feel!</h3>
+                        <p class="details_description">Experience the thrill of interacting with maps in a new and exciting way. 
+                            Whether you're exploring districts, estimating travel times, or testing your knowledge with a quiz, 
+                            these projects bring a touch-and-feel element to map navigation, making it both educational and enjoyable. Have fun!
+                        </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Dec 2023</span></li>
+                                <li>Technologies - <span>OpenCV, Mideapipe, Python, CVZone</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/interactive-maps" target="_blank">CLICK HERE for codebase</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                 <!-- project - 1 ML (Outdoor Navigation)-->
+                <div class="work_card mix ml">
+                    <img src="assets/img/outdoor-navigation.png" alt="" class="work_img">
+                    <h3 class="work_title">Outdoor Navigation</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title">Outdoor Navigation - custom</h3>
+                        <p class="details_description">Simple way to find the nearest walkable route from train station to office.
+                            In a situation where there are 'X' number of departments located in different locations, using this app users can easily find the department building. 
+                        </p>
+                            <ul class="details_info">
+                                <li>Created - <span>1 Feb 2024</span></li>
+                                <li>Technologies - <span>Python, Streamlit, mapbox, ML</span></li>
+                                <li>Role - <span>Fullstack Data Scientist</span></li>
+                                <li>View - <span><a href="https://outdoor-navigation.streamlit.app/", target="_blank">click here for demo</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                <!-- project - 2 ML-->
+                <div class="work_card mix ml">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">ML app - 404</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title">ML app - 404</h3>
+                        <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Odit soluta vero facilis.</p>
+                            <ul class="details_info">
+                                <li>Created - <span>4 dec 2020</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#">www.domain.com</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                 <!-- project - 1 dl-->
+                <div class="work_card mix dl">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">DL app - 404</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title">DL app - 404.</h3>
+                        <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Odit soluta vero facilis.</p>
+                            <ul class="details_info">
+                                <li>Created - <span>4 dec 2020</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>DS</span></li>
+                                <li>View - <span><a href="#">www.domain.comadaff</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                 <!-- project - 2 dl-->
+                <div class="work_card mix dl">
+                    <img src="assets/img/underConstruction.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">DL app - 404</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title">DL app - 404</h3>
+                        <p class="details_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Odit soluta vero facilis.</p>
+                            <ul class="details_info">
+                                <li>Created - <span>4 dec 2020</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>View - <span><a href="#">www.domain.com</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                <!-- Project -1 LLM -->
+                <div class="work_card mix llm">
+                    <img src="assets/img/chatbot_robot.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">e-commerce Product Analysis</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title"> Using AI to Enhance Product Pages with LangChain and Python</h3>
+                        <p class="details_description">This project aims to use the realm of OpenAI and Langchain to generate sentiment of any ecommerce products.
+                            This will help the ecommerce companies to understand their potential customers in a better way and target the right product to right customer.
+
+                        </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Aug 2023</span></li>
+                                <li>Technologies - <span>OpenAI, LLM, Python</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/product_analysis_llm/blob/main/product_specification_llm.ipynb" target="_blank">CLICK HERE FOR DEMO</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+                <!-- Project -2 LLM -->
+                <div class="work_card mix llm">
+                    <img src="assets/img/chatbot_xlab.jpeg" alt="" class="work_img">
+                    <h3 class="work_title">CHATBOT / XLAB-Bot</h3>
+                    <span class="work_button">Demo
+                        <i class="uil uil-arrow-right work_button-icon"></i>
+                    </span>
+                    <div class="portfolio_item-details">
+                        <h3 class="details_title"> Simple chatbot created using pretrained models available on GPT-4-All</h3>
+                        <p class="details_description">
+                            The chatbot leverages the power of GPT-4 to generate human-like responses and engage in natural language conversations.
+                        </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Jan 2024</span></li>
+                                <li>Technologies - <span>GPT4all, LLM, Python, Chainlit</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/XLAB-Bot" target="_blank">CLICK HERE FOR DEMO</a></span></li>
+                            </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Portfolio Popup -->
+
+        <div class="portfolio_popup">
+            <div class="portfolio_popup-inner">
+                <div class="portfolio_popup-content grid">
+                    <span class="portfolio_popup-close"><i class="uil uil-times"></i></span>
+                    <div class="pp_thumbnail">
+                        <img src="assets/img/drone_cv.webp" alt="" class="portfolio_popup-img">
+                    </div>
+                    <div class="portfolio_popup-info">
+                        <div class="portfolio_popup-subtitle">Featured - <span> Computer Vision</span></div>
+                        <div class="portfolio_popup-body">
+                            <h3 class="details_title">Control drone using gesture recognition algorithms and enable facial tracking for autonomous following.</h3>
+                        <p class="details_description">In this project, a drone is controlled using gesture recognition algorithms and facial tracking capabilities. 
+                            Utilizing OpenCV and Python, the system is designed to interpret specific hand or body gestures as commands for the drone's movement, such as take-off, landing, or changing direction.
+                             Additionally, the drone is equipped with facial tracking features, allowing it to autonomously follow a targeted individual by recognizing and locking onto their face. 
+                             The combination of gesture-based control and facial tracking provides a seamless and interactive experience for controlling the drone. </p>
+                            <ul class="details_info">
+                                <li>Created - <span>Aug 2023</span></li>
+                                <li>Technologies - <span>OpenCV, Python</span></li>
+                                <li>Role - <span>Data Scientist</span></li>
+                                <li>View - <span><a href="https://github.com/nizamuddinsyed/drone" target="_blank">github repo</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero__content">
-            <h1 class="hero__title">Data Science is My Art</h1>
-            <p class="hero__subtitle">Building intelligent solutions through data</p>
-            <div id="typed-strings">
-                <span>Machine Learning Engineer</span>
-                <span>Data Scientist</span>
-                <span>AI Solution Architect</span>
-            </div>
-            <span id="typed"></span>
+        
+        <!-- NEW SERVICES -->
+        <section class="services section" id="services">
+        <h2 data-heading="Services" class="section_title" >What I offer</h2>
+        <!-- <div class="main__cards cards"> -->
+            <div class="services_container container grid">
+            <div class="cards__inner">
+                <!-- Free Consultation -->
+                  <div class="cards__card card">
+                    <h2 class="card__heading">FREE (30 MINUTES)</h2>
+                    <p class="card__price">€ 0.00</p>
+                    <ul role="list" class="card__bullets flow">
+                      <li>Product Visioning<span class="card_icon">🚀</span></li>
+                      <li>Brain Storming<span class="card_icon">🌀</span></li>
+                      <li>Tech Stack<span class="card_icon">🛠️</span></li>
+                      <li>Cost Forecasting<span class="card_icon">💰</span></li>
+                      <li>Agile 101<span class="card_icon">🔄</span></li>
+                    </ul>
+                    <a href="https://cal.com/nizamsyed/free-consultation" class="card__cta cta" target="_blank">BOOK NOW</a>
+                  </div>
+            
+                  <!-- Paid Consultation -->
+                  <div class="cards__card card">
+                    <h2 class="card__heading">KICKSTART DEVELOPMENT</h2>
+                    <p class="card__price">€ GET YOUR QUOTE</p>
+                    <ul role="list" class="card__bullets flow">
+                      <li>Tailored AI Solution<span class="card_icon">🚀</span></li>
+                      <li>UI/UX Desgin<span class="card_icon">🌃</span></li>
+                      <li>Rapid Prototyping<span class="card_icon">🧑🏻‍💻</span></li>
+                      <li>App Building<span class="card_icon">⏳</span></li>
+                      <li>Cloud Deployment<span class="card_icon">🌐</span></li>
+                    </ul>
+                    <a href="https://cal.com/nizamsyed/ai-development" class="card__cta cta" target="_blank">BOOK NOW</a>
+                  </div>
+                </div>
+            <div class="overlay cards__inner"></div>
         </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="viz-container" id="project1-viz"></div>
-                <h3>AI-Powered Analytics Platform</h3>
-                <p>Real-time data analysis using machine learning algorithms</p>
+
+        <!--===== Testimonials / Endorsement =====-->
+        <section class="testimonials section" id="testimonials">
+            <h2 data-heading="Testimonials from my colleagues" class="section_title" >Endorsement</h2>
+
+            <div class="testimonials_container container swiper">
+                <div class="swiper-wrapper" >
+                    <!-- Lennart -->
+                    <div class="testimonial_card swiper-slide">
+                        <div class="testimonial_quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial_description">Few people are able to adapt to new tasks, responsibilities and situations as flexibly as Nizam. I had the pleasure of working with Nizam for more than three years at the LSBG, successfully collaborating on value-adding projects for the public sector. 
+
+                            Nizams dedication to develop a working solution while always keeping the overarching concepts in mind is key to delivering innovative products centered around AI. Whether in a small team or as the only developer, Nizam goes beyond his core responsibility by taking over additional tasks and roles without jeopardizing his results. He also did not hesitate to become mentor for a newly recruited AI engineer in our department. 
+                            
+                            His positive attitude makes working with Nizam enjoyable even when struggling with impediments inherent to public administration. For any team that needs an AI engineer with an understanding of Data Science and the Big Picture, Nizam is a valuable asset.</p>
+                        <h3 class="testimonial_date">October. 2023</h3>
+                        <div class="testimonial_profile">
+                            <img src="assets/img/Lennart_linkedin.jpeg" alt="" class="testimonial_profile-img">
+                            <div class="testimonial_profile-data">
+                                <span class="testimonial_profile-name">Lennart Brand</span>
+                                <span class="testimonial_profile-detail">Scrum Master @ LSBG, Hamburg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Niko -->
+                    <div class="testimonial_card swiper-slide">
+                        <div class="testimonial_quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial_description">Nizam is an extremely accomplished AI engineer and an even better colleague. 
+                            Always friendly, good-humored and solution-oriented at all times. 
+                            He also never misses an opportunity to develop in his field every day. 
+                            In doing so, he achieves outstanding results and solutions in every project. 
+                            Any team would be lucky to have someone like Nizam on board.</p>
+                        <h3 class="testimonial_date">August. 2023</h3>
+                        <div class="testimonial_profile">
+                            <img src="assets/img/niko_lsbg.jpeg" alt="" class="testimonial_profile-img">
+                            <div class="testimonial_profile-data">
+                                <span class="testimonial_profile-name">Nikolai Merkel</span>
+                                <span class="testimonial_profile-detail">Product Owner @ LSBG, Hamburg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ernesta -->
+                    <div class="testimonial_card swiper-slide">
+                        <div class="testimonial_quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial_description">Nizam is very qualified, knowledgeable in his field and overall digital product creation process. 
+                            Along with his professionalism, he is a kind, patient, understanding and fun teammate. It was a pleassure to work together!</p>
+                        <h3 class="testimonial_date">September. 2022</h3>
+                        <div class="testimonial_profile">
+                            <img src="assets/img/ernesta_linkedin.jpeg" alt="" class="testimonial_profile-img">
+
+                            <div class="testimonial_profile-data">
+                                <span class="testimonial_profile-name">Ernesta Rupsyte</span>
+                                <span class="testimonial_profile-detail">UI/UX Designer</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Philipp -->
+                    <div class="testimonial_card swiper-slide">
+                        <div class="testimonial_quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial_description">I have only been working with Nizam in a team for a short time, but have enjoyed this time very much.
+                            As an experienced AI developer, Nizam is a genius for mathematical problems. Moreover, his expertise also extends to other areas of computer science. He is always helpful and was always there to support me during the training phase in my new job. 
+                            As the main developer for a large project, he has always shown determination and foresight and brought the project to a successful conclusion.
+                            I am very much looking forward to continuing to work with Nizam. I only wish him the best for his professional future and I hope that we will continue to work together for a long time to come.</p>
+                        <h3 class="testimonial_date">September. 2023</h3>
+                        <div class="testimonial_profile">
+                            <img src="assets/img/philipp_linkedin.jpeg" alt="" class="testimonial_profile-img">
+
+                            <div class="testimonial_profile-data">
+                                <span class="testimonial_profile-name">Philipp Brügmann</span>
+                                <span class="testimonial_profile-detail">Softwareingenieur im DigiLab   </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Navneetha -->
+                    <div class="testimonial_card swiper-slide">
+                        <div class="testimonial_quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial_description">I worked with Syed Nizam for three years in HP Global Soft, I would recommend him as a person with profound knowledge, goal-oriented and focused person.</p>
+                        <h3 class="testimonial_date">September. 2023</h3>
+                        <div class="testimonial_profile">
+                            <img src="assets/img/navneeth_linkedin.jpeg" alt="" class="testimonial_profile-img">
+
+                            <div class="testimonial_profile-data">
+                                <span class="testimonial_profile-name">Navaneetha krishnan</span>
+                                <span class="testimonial_profile-detail">IFS Consultant | IFS Certified Supply Chain Consultant (Cloud) at Tech Mahindra</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Shubham -->
+                    <div class="testimonial_card swiper-slide">
+                        <div class="testimonial_quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial_description">Nizam and I worked together at Digital Product School, Munich for 3 months as an AI Engineer. We discussed numerous ideas, and participated in hackathons, overnight coding sessions, and many more. 
+                            He has a thorough understanding of machine learning algorithms and big data. 
+                            Additionally, his great work ethic, hard work and eagerness to learn makes him truly exceptional.</p>
+                        <h3 class="testimonial_date">September. 2023</h3>
+                        <div class="testimonial_profile">
+                            <img src="assets/img/shubham_linkedin.jpeg" alt="" class="testimonial_profile-img">
+
+                            <div class="testimonial_profile-data">
+                                <span class="testimonial_profile-name">Shubham Agarwal</span>
+                                <span class="testimonial_profile-detail">Founder of Zust.ai</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                  <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- More project cards -->
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="skills">
-        <h2>Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">🤖</div>
-                <h3>Machine Learning</h3>
-                <p>Deep Learning, NLP, Computer Vision</p>
+
+        <!--===== Contact =====-->
+        <section class="contact section" id="contact">
+            <h2 data-heading="Get in touch" class="section_title" >Contact Me</h2>
+
+            <div class="contact_container container grid">
+                <!-- left side of contact me icons -->
+                <div class="contact_content">
+                    <div class="contact_info">
+                        <!-- Email -->
+                        <div class="contact_card">
+                            <a href="mailto:contact.nizamsyed@gmail.com">
+                                <i class="uil uil-envelope-edit info_icon"></i>
+                                <div>
+                                    <h3 class="info_title">Email</h3>
+                                    <!-- <span class="info_subtitle">iamsyed[dot]05[at]gmail[dot]com</span> -->
+                                    <span class="contact_button">
+                                        Write me <i class="uil uil-arrow-right contact_button-icon"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Whatsapp -->
+                        <div class="contact_card">
+                            <!-- <a href="https://wa.me/01628792331" target="_blank"> -->
+                                <i class="uil uil-whatsapp info_icon"></i>
+                                <h3 class="contact_card-title">Whatsapp</h3>
+                                <span class="contact_button">
+                                    DM <i class="uil uil-arrow-right contact_button-icon"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- Telegram -->
+                        <div class="contact_card">
+                            <a href="https://t.me/Nizzi05" target="_blank">
+                                <i class="uil uil-telegram-alt info_icon"></i>
+                                <h3 class="contact_card-title">Telegram</h3>
+                                <!-- <span class="contact_card-data">fb.com/nizam</span> -->
+                                <span class="contact_button">
+                                    DM <i class="uil uil-arrow-right contact_button-icon"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right side of contact me form -->
+                <!-- form with email functionality -->
+                <div class="contact_content">
+                    <form id="contact-form" target="_blank" method="POST">
+                        <input type="hidden" name="_template" value="table">
+
+                        <!-- auto response -->
+                        <input type="hidden" name="_autoresponse" value="
+                        Hey,
+
+                        Thank you for reaching out to us. We value your inquiry and will ensure that it receives the attention it deserves. Please be assured that we will get back to you as soon as possible.
+
+                        Thank you for your patience and understanding.
+
+                        Warm regards,
+                        
+                        Nizam Syed
+                        ">
+                        <!-- <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'm rolling up my sleeves to reply asap."> -->
+                        <div class="form-group">
+                            <div class="form-col">
+                                <!-- first column - Name REQUIRED-->
+                              <div class="col">
+                                        <!-- <input type="text" name="name" class="form-control" placeholder="Name"> -->
+                                        <input id="name" type="text" name="name" class="form-control" placeholder="* Full Name" required>
+                                </div>
+                                <!-- second column - email REQUIRED-->
+                              <div class="col">
+                                    <!-- <input type="email" class="input" placeholder="Email"> -->
+                                    <input type="email" name="email" class="form-control" placeholder="* Email Address" required>
+                                </div>
+
+                                <!-- 3rd Column phone- NOT REQUIRED -->
+                                <div class="col">
+                                    <!-- <input type="email" class="input" placeholder="Email"> -->
+                                    <input type="phone" name="phone" class="form-control" placeholder="Phone no" >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- text area -->
+                        <div class="form-group textarea">
+                                <!-- <textarea name="message" id="" class="input" placeholder="Your Message..."></textarea> -->
+                                <textarea placeholder="* Type Your Message..." class="form-control" name="message" rows="10"  required></textarea>
+                        </div><br>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="send_message_button"><i class="uil uil-navigator button_icon"></i>
+                            Submit
+                        </button>
+                    </form>
+                </div>
+
             </div>
-            <!-- More skill cards -->
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <h2>Let's Create Something Amazing</h2>
-        <form class="contact-form">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <div class="footer_bg">
+               <div class="footer_container container grid">
+                    <div>
+                        <h1 class="footer_title">Nizam Syed</h1>
+                        <span class="footer_subtitle">Data Scientist</span>
+                    </div>
 
-    <footer class="footer">
-        <p>© 2024 Data Science Portfolio</p>
-    </footer>
+                    <ul class="footer_links">
+                        <!-- test -->
+                    </ul>
+                    <!-- <ul class="footer_links">
+                        <li>
+                            <a href="#home" class="footer_link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="footer_link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#work" class="footer_link">Work</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer_link">Contact</a>
+                        </li>
+                    </ul> -->
+                    <div class="footer_socials">
+                        <a href="https://www.linkedin.com/in/syed-nizam-uddin/" target="_blank" class="footer_social-links">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/nizamuddinsyed" target="_blank" class="footer_social-links">
+                            <i class="uil uil-github"></i>
+                        </a>
+                        <!-- <a href="https://www.kaggle.com/syednizamuddin" target="_blank" class="footer_social-links">
+                            <i class="uil uil-brackets-curly"></i>
+                        </a> -->
+                    </div>
+                </div>
+                <p class="footer-heart">
+                    Made with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+                  <img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> in Germany
+                  </p>
+                <p class="footer_copy">&copy Nizam Syed | All Rights Reserved | <a class="footer_subtitle" href="imprint.html">Imprint</a>
+                    | <a class="footer_subtitle" href="data_protection.html">Data Protection</a></p>
+            </div>
 
-    <!-- Load main.js last, after all dependencies are loaded -->
-    <script src="/assets/js/main.js"></script>
+            <a href="#" id="scroll" style="display: none;"><span></span></a>
+        </footer>
+    </main>
+
+    <!-- BACK TO TOP BUTTON -->
+	<a href="#" class="back-to-top" >
+		<span class="uil uil-angle-up"></span>
+	</a>
+
+    <!--========== MIXITUP FILTER ==========-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--========== SWIPER JS ==========-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Footor JS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
